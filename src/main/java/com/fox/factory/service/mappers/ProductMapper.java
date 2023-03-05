@@ -12,17 +12,13 @@ public interface ProductMapper {
     ProductListDto toDto(Product product);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Product partialUpdate(ProductListDto productListDto, @MappingTarget Product product);
+    Product partialUpdateProductListDro(ProductListDto productListDto, @MappingTarget Product product);
 
-    Product toEntity1(ProductDetailDto productDetailDto);
+    Product fromProductDetail(ProductDetailDto productDetailDto);
 
-    ProductDetailDto toDto1(Product product);
+    ProductDetailDto toProductDetailDto(Product product);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Product partialUpdate1(ProductDetailDto productDetailDto, @MappingTarget Product product);
 
-    Product toEntity2(Product product);
-
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Product partialUpdate2(Product product, @MappingTarget Product product);
 }

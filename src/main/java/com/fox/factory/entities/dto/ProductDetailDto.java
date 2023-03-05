@@ -23,5 +23,5 @@ public class ProductDetailDto implements Serializable {
     private final Set<CatrgoryDto> catrgories;
     private final Float rating;
     private final Integer rates;
-    private final Set<Comment> comments;
+    private final Set<CommentsDto> comments;
 }

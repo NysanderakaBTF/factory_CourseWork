@@ -19,7 +19,7 @@ import java.util.Set;
 public class OrderDto implements Serializable {
     private final Long id;
     private final UserInOrderDto userInOrder;
-    private final Set<OrderItem> itemSet;
+    private final Set<OrderItemInListDto> itemSet;
     private final Double totalPrice;
     private final Float discount;
     private final LocalDate creationDate;

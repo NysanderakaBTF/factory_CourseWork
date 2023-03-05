@@ -13,8 +13,4 @@ public interface OrderItemMapper {
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     OrderItem partialUpdate(OrderItemInListDto orderItemInListDto, @MappingTarget OrderItem orderItem);
 
-    OrderItem toEntity1(OrderItem orderItem);
-
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    OrderItem partialUpdate1(OrderItem orderItem, @MappingTarget OrderItem orderItem);
 }

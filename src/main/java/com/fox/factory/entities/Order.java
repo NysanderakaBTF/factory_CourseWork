@@ -39,6 +39,10 @@ public class Order {
         this.itemSet.remove(i);
     }
 
+    public void removeOrderItem(Long id){
+        this.itemSet.removeIf(orderItem -> orderItem.getId() == id);
+    }
+
 
 
 }

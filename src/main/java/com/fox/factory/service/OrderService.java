@@ -3,7 +3,11 @@ package com.fox.factory.service;
 import com.fox.factory.entities.Order;
 import com.fox.factory.entities.OrderItem;
 import com.fox.factory.entities.OrderStatus;
+import com.fox.factory.entities.dto.OrderDto;
+import com.fox.factory.entities.dto.OrderItemInListDto;
 import com.fox.factory.repositories.OrderRepository;
+import com.fox.factory.service.mappers.OrderItemMapper;
+import com.fox.factory.service.mappers.OrderMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,61 +16,60 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
 public class OrderService {
     private final OrderRepository repository;
+    private final OrderMapper mapper;
+    private final OrderItemMapper itemMapper;
     @Transactional
-    public Order create(Order order){
-        return repository.save(order);
+    public OrderDto create(OrderDto order){
+        return mapper.toDto(repository.save(mapper.toEntity(order)));
     }
     @Transactional
-    public List<Order> getAllByUserId(Long uid){
-        return repository.findAllByUser_Id(uid);
+    public List<OrderDto> getAllByUserId(Long uid){
+        return repository.findAllByUser_Id(uid).stream().map(mapper::toDto).collect(Collectors.toList());
     }
     @Transactional
-    public List<Order> getAllBetweenDates(LocalDate d1, LocalDate d2){
-        return repository.findAllByCreationDateBetween(d1,d2);
+    public List<OrderDto> getAllBetweenDates(LocalDate d1, LocalDate d2){
+        return repository.findAllByCreationDateBetween(d1,d2).stream().map(mapper::toDto).collect(Collectors.toList());
     }
     @Transactional
-    public Order getById(Long id){
-        return repository.findById(id).orElse(null);
+    public OrderDto getById(Long id){
+        return mapper.toDto( repository.findById(id).orElse(null));
     }
     @Transactional
     public void delete(Long id){
         repository.deleteById(id);
     }
     @Transactional
-    public Order update(Long id, Order upd) throws InchangableOrderException {
+    public OrderDto update(Long id, OrderDto upd) throws InchangableOrderException {
         var a = repository.findById(id).orElse(null);
         if(a != null){
            if(a.getStatus()!= OrderStatus.IN_BUCKET) {
                throw new InchangableOrderException("Can't modify existing order"+id);
            }
-           a.setItemSet(upd.getItemSet());
-           a.setStatus(upd.getStatus());
-           a.setDiscount(upd.getDiscount());
-           a.setTotalPrice(upd.getTotalPrice());
-           return repository.save(a);
+           return mapper.toDto(repository.save(mapper.partialUpdate(upd, a)));
         }
         return null;
     }
     @Transactional
-    public Order addOrderItem(Long id, OrderItem oi){
+    public OrderDto addOrderItem(Long id, OrderItemInListDto oi){
         var a = repository.findById(id).orElse(null);
         if(a==null)
-            return a;
-        a.addOrderItem(oi);
-        return repository.save(a);
+            return null;
+        a.addOrderItem(itemMapper.toEntity(oi));
+        return mapper.toDto(repository.save(a));
     }
     @Transactional
-    public Order removeOrderItem(Long id, OrderItem oi){
-        var a = repository.findById(id).orElse(null);
+    public OrderDto removeOrderItem(Long orderId, Long itemId){
+        var a = repository.findById(orderId).orElse(null);
         if(a==null)
-            return a;
-        a.removeOrderItem(oi);
-        return repository.save(a);
+            return null;
+        a.removeOrderItem(itemId);
+        return mapper.toDto(repository.save(a));
     }
 
 

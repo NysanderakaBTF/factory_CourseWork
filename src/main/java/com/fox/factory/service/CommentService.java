@@ -1,72 +1,73 @@
 package com.fox.factory.service;
 
-import com.fox.factory.entities.Catrgory;
-import com.fox.factory.entities.Comment;
-import com.fox.factory.entities.User;
+import com.fox.factory.entities.dto.CommentCreateDto;
+import com.fox.factory.entities.dto.CommentsDto;
+import com.fox.factory.entities.dto.SubCommentDto;
+import com.fox.factory.entities.dto.UserInCommentDto;
 import com.fox.factory.repositories.CommentRepository;
+import com.fox.factory.service.mappers.CommentMapper;
+import com.fox.factory.service.mappers.UserMapper;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
 public class CommentService {
 
     private final CommentRepository repository;
+    private final CommentMapper mapper;
+    private final UserMapper userMapper;
     @Transactional
-    public Comment create(Comment a){
-        a.setPublishDate(LocalDate.now());
-        return repository.save(a);
+    public CommentsDto create(CommentCreateDto a){
+        return mapper.toDto(repository.save(mapper.toEntityCreate(a)));
     }
     @Transactional
-    public List<Comment> findByAuthor(User author){
-        return repository.findAllByAuthor(author);
+    public List<CommentsDto> findByAuthor(UserInCommentDto author){
+        return repository.findAllByAuthor(userMapper.toEntity(author)).stream().map(mapper::toDto).collect(Collectors.toList());
     }
     @Transactional
-    public List<Comment> findAllBetweenDate(@Nullable LocalDate from, @Nullable LocalDate to){
+    public List<CommentsDto> findAllBetweenDate(@Nullable LocalDate from, @Nullable LocalDate to){
         if (from == null)
             from = LocalDate.MIN;
         if (to == null)
             to = LocalDate.MAX;
-        return repository.findAllByPublishDateBetween(from, to);
+        return repository.findAllByPublishDateBetween(from, to).stream().map(mapper::toDto).collect(Collectors.toList());
     }
     @Transactional
-    public List<Comment> findByRating(Integer rating){
-        return repository.findAllByRate(rating);
+    public List<CommentsDto> findByRating(Integer rating){
+        return repository.findAllByRate(rating).stream().map(mapper::toDto).collect(Collectors.toList());
     }
 
     //for modetaror = admin
     @Transactional
-    public Comment publishComment(Long id){
+    public CommentsDto publishComment(Long id){
         var a = repository.findById(id).orElse(null);
         if (a == null)
             return null;
         a.setPublished(true);
-        return repository.save(a);
+        return mapper.toDto(repository.save(a));
 
     }
     @Transactional
-    public Comment addSubComment(Long id, Comment sub){
+    public CommentsDto addSubComment(Long id, SubCommentDto sub){
         var a = repository.findById(id).orElse(null);
         if (a != null){
-            a.addToSubComments(sub);
-            return repository.save(a);
+            a.addToSubComments(mapper.fromSubCommentDto(sub));
+            return mapper.toDto(repository.save(a));
         }
         return null;
     }
     @Transactional
-    public Comment edit(Long id, Comment upd){
+    public CommentsDto edit(Long id, CommentsDto upd){
         var a = repository.findById(id).orElse(null);
         if (a!=null) {
-            a.setText(upd.getText());
-            a.setRate(upd.getRate());
-            return repository.save(a);
+            return mapper.toDto(repository.save(mapper.partialUpdate(upd, a)));
         }
         return null;
     }
@@ -75,7 +76,7 @@ public class CommentService {
         repository.deleteById(id);
     }
     @Transactional
-    public Comment getById(Long id){
-        return repository.findById(id).orElse(null);
+    public CommentsDto getById(Long id){
+        return mapper.toDto(repository.findById(id).orElse(null));
     }
 }

@@ -17,6 +17,6 @@ import java.io.Serializable;
 public class OrderItemInListDto implements Serializable {
     private final Long id;
     private final Integer quantity;
-    private final Product product;
+    private final ProductListDto product;
     private final Float total;
 }
