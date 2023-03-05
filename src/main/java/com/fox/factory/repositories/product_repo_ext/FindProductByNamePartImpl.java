@@ -17,7 +17,7 @@ public class FindProductByNamePartImpl implements FindProductByNamePart{
         this.entityManager = entityManager;
     }
     @Override
-    public List<Product> filterProductByCategory(String namePart) {
+    public List<Product> filterProductByName(String namePart) {
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Product> query = builder.createQuery(Product.class);
         Root<Product> root = query.from(Product.class);

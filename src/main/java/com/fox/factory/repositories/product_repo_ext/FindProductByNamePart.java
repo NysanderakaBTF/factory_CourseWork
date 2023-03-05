@@ -6,5 +6,5 @@ import com.fox.factory.entities.Product;
 import java.util.List;
 
 public interface FindProductByNamePart {
-    List<Product> filterProductByCategory(String namePart);
+    List<Product> filterProductByName(String namePart);
 }

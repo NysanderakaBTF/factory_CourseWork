@@ -1,42 +1,53 @@
 package com.fox.factory.service;
 
 import com.fox.factory.entities.AttendanceTicket;
+import com.fox.factory.entities.dto.AttendanceTicketDto;
 import com.fox.factory.repositories.AttendanceTicketRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fox.factory.service.mappers.AttendanceTicketMapper;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor
+
 public class AttendanceTicketService {
-    @Autowired
-    private AttendanceTicketRepository attendanceTicketRepository;
-
-    public AttendanceTicket createAttendanceTicket(AttendanceTicket at){
-        return attendanceTicketRepository.save(at);
-    }
-    public AttendanceTicket findById(Long id){
-        return attendanceTicketRepository.findById(id).orElse(null);
-    }
-    public List<AttendanceTicket> findAllByDate(Date d){
-        return attendanceTicketRepository.findAllByAttandenceDate(d);
-    }
-    public List<AttendanceTicket> findByDateBetween(Date d1, Date d2){
-        return attendanceTicketRepository.findAllByAttandenceDateBetween(d1, d2);
-    }
-    public AttendanceTicket updateTicket(Long id, AttendanceTicket upInst){
-        var a = attendanceTicketRepository.findById(id).orElse(null);
-        if (a!=null){
-            a.setPrice(upInst.getPrice());
-            a.setUser(upInst.getUser());
-            a.setAttandenceDate(upInst.getAttandenceDate());
-            a.setCreationDate(upInst.getCreationDate());
-            return attendanceTicketRepository.save(a);
-        }
-        return null;
+    private final AttendanceTicketRepository attendanceTicketRepository;
+    private final AttendanceTicketMapper mapper;
+    @Transactional
+    public AttendanceTicketDto createAttendanceTicket(AttendanceTicketDto ticketDto){
+        return mapper.toDto(attendanceTicketRepository.save(
+                mapper.toEntity(ticketDto)
+        ));
     }
 
+    public AttendanceTicketDto findById(Long id){
+        return mapper.toDto(attendanceTicketRepository.findById(id).orElse(null));
+    }
+    @Transactional
+    public List<AttendanceTicketDto> findAllByDate(Date date){
+        return attendanceTicketRepository.findAllByAttandenceDate(date).stream().map(mapper::toDto).collect(Collectors.toList());
+    }
+    @Transactional
+    public List<AttendanceTicketDto> findByDateBetween(Date fromDate, Date toDate){
+        return attendanceTicketRepository.findAllByAttandenceDateBetween(fromDate, toDate).stream().map(mapper::toDto).collect(Collectors.toList());
+    }
+    @Transactional
+    public AttendanceTicketDto updateTicket(Long id, AttendanceTicketDto upInst){
+        var ticket = attendanceTicketRepository.findById(id).orElse(null);
+        if (ticket==null)
+            return null;
+
+        return mapper.toDto(attendanceTicketRepository.save(
+                mapper.partialUpdate(upInst, ticket)
+        ));
+
+    }
+    @Transactional
     public void delete(Long id){
         attendanceTicketRepository.deleteById(id);
     }

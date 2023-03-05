@@ -32,7 +32,7 @@ public class Product {
     private Set<Catrgory> catrgories;
 
     private Float rating;
-    private Integer rates;
+    private Integer rates = 0;
     @OneToMany
     private Set<Comment> comments;
 
@@ -53,5 +53,9 @@ public class Product {
 
     public void addComment(Comment comment){
         this.comments.add(comment);
+    }
+    public void updateRate(Integer a){
+        rating = (rating*rates + a )/(rates+1);
+        rates++;
     }
 }
