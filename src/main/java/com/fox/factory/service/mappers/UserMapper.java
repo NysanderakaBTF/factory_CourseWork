@@ -9,27 +9,30 @@ import org.mapstruct.*;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING, uses = {CommentMapper.class, OrderMapper.class, AttendanceTicketMapper.class})
 public interface UserMapper {
-    User toEntity(UserInTicketDto userInTicketDto);
+    User toEntityInTicket(UserInTicketDto userInTicketDto);
 
     UserInTicketDto toInTicketDto(User user);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    User partialUpdate(UserInTicketDto userInTicketDto, @MappingTarget User user);
+    User partialUpdateForTicket(UserInTicketDto userInTicketDto, @MappingTarget User user);
 
-    User toEntity(UserInCommentDto userInCommentDto);
+
+    User toEntityInComment(UserInCommentDto userInCommentDto);
 
     UserInCommentDto toInCommentDto(User user);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    User partialUpdate(UserInCommentDto userInCommentDto, @MappingTarget User user);
+    User partialUpdateForComment(UserInCommentDto userInCommentDto, @MappingTarget User user);
 
 
-    User toEntity2(UserDetailDto userDetailDto);
+    User toEntityDetail(UserDetailDto userDetailDto);
 
-    UserDetailDto toDto(User user);
+    UserDetailDto toDetailDto(User user);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    User partialUpdate2(UserDetailDto userDetailDto, @MappingTarget User user);
+    User partialUpdateDtoDetail(UserDetailDto userDetailDto, @MappingTarget User user);
+
+
 
     User toEntity1(UserInOrderDto userInOrderDto);
 

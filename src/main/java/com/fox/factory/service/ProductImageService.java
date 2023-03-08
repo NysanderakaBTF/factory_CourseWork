@@ -9,14 +9,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Set;
+
 @Service
 @AllArgsConstructor
 public class ProductImageService {
     private final ProductImageRepository repository;
     private final ProductImageMapper mapper;
+
+    private final ProductService productService;
+
     @Transactional
-    public ProductImageDto create(ProductImageDto image){
-        return mapper.toDto(repository.save(mapper.toEntity(image)));
+    public Set<ProductImageDto> create(Long pid, ProductImageDto image){
+        var img = repository.save(mapper.toEntity(image));
+        return productService.addImageToProduct(pid, img).getProductImageSet();
     }
     @Transactional
     public ProductImageDto getById(Long id){
@@ -25,10 +31,21 @@ public class ProductImageService {
     @Transactional
 
     public ProductImageDto updateImg(Long id, ProductImageDto updated){
-        var image = repository.findById(id).orElse(null);
-        if (image==null)
-            return null;
-        return mapper.toDto(repository.save(mapper.partialUpdate(updated, image)));
+        return repository.findById(id)
+                .map(image -> mapper.partialUpdate(updated, image))
+                .map(repository::save)
+                .map(mapper::toDto)
+                .orElse(null);
+//
+//        var image = repository.findById(id).orElse(null);
+//        if (image==null)
+//            return null;
+//        return mapper.toDto(repository.save(mapper.partialUpdate(updated, image)));
+    }
+
+    @Transactional
+    public void deleteImg(Long id){
+        repository.deleteById(id);
     }
 
 }

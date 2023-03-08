@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -17,8 +18,8 @@ import java.util.Date;
 @EqualsAndHashCode
 public class AttendanceTicketDto implements Serializable {
     private final Long id;
-    private final Date attandenceDate;
-    private final Date creationDate;
+    private final LocalDate attandenceDate;
+    private final LocalDate creationDate;
     private final Double price;
     private final UserInTicketDto user;
 }

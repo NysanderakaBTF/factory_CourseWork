@@ -47,4 +47,8 @@ public class OrderItemService {
         return mapper.toDto(repository.findById(id).orElse(null));
     }
 
+    public OrderItem getObjectFromDto(OrderItemInListDto item){
+        return mapper.toEntity(item);
+    }
+
 }

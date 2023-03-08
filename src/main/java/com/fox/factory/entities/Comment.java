@@ -35,7 +35,13 @@ public class Comment {
 
     private Integer rate;
 
-    public void addToSubComments(Comment m){
+    public Comment addToSubComments(Comment m){
         subComments.add(m);
+        return this;
+    }
+
+    public Comment setPublished(boolean isPublished){
+        this.isPublished = isPublished;
+        return this;
     }
 }

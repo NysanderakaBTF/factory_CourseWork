@@ -37,15 +37,23 @@ public class CatrgoryService {
     }
     @Transactional
     public CatrgoryDto update(Long id, CatrgoryDto updated) {
-        var catrgory = repository.findById(id).orElse(null);
-        if (catrgory == null)
-            return null;
-        return mapper.toDto(repository.save(mapper.partialUpdate(updated, catrgory)));
+        return repository.findById(id)
+                .map(catrgory -> mapper.partialUpdate(updated, catrgory))
+                .map(repository::save)
+                .map(mapper::toDto)
+                .orElse(null);
+//        var catrgory = repository.findById(id).orElse(null);
+//        if (catrgory == null)
+//            return null;
+//        return mapper.toDto(repository.save(mapper.partialUpdate(updated, catrgory)));
 
     }
     @Transactional
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    @Transactional
+    public List<CatrgoryDto> getAll(){return repository.findAll().stream().map(mapper::toDto).collect(Collectors.toList());}
 
 }

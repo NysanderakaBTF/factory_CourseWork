@@ -13,4 +13,7 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
 
     List<Comment> findAllByPublishDateBetween(LocalDate d1, LocalDate d2);
     List<Comment> findAllByRate(Integer mark);
+    List<Comment> findAllByProduct_Id(Long prod_id);
+
+    List<Comment> findAllByProduct_IdAndRate(Long pid, Integer rate);
 }

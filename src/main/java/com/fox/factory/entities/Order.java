@@ -1,6 +1,7 @@
 package com.fox.factory.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +18,7 @@ public class Order {
     private Long id;
 
     @ManyToOne
+    @NotNull
     private User user;
     @OneToMany
     private Set<OrderItem> itemSet;
@@ -31,16 +33,18 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
-    public void addOrderItem(OrderItem i){
+    public Order addOrderItem(OrderItem i){
         this.itemSet.add(i);
+        return this;
     }
 
     public void removeOrderItem(OrderItem i){
         this.itemSet.remove(i);
     }
 
-    public void removeOrderItem(Long id){
+    public Order removeOrderItem(Long id){
         this.itemSet.removeIf(orderItem -> orderItem.getId() == id);
+        return this;
     }
 
 

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -15,8 +16,8 @@ public class AttendanceTicket {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private Date attandenceDate;
-    private Date creationDate;
+    private LocalDate attandenceDate;
+    private LocalDate creationDate;
     private Double price;
 
     @ManyToOne

@@ -3,6 +3,7 @@ package com.fox.factory.service;
 import com.fox.factory.entities.Catrgory;
 import com.fox.factory.entities.Comment;
 import com.fox.factory.entities.Product;
+import com.fox.factory.entities.ProductImage;
 import com.fox.factory.entities.dto.*;
 import com.fox.factory.repositories.CommentRepository;
 import com.fox.factory.repositories.ProductRepository;
@@ -11,6 +12,7 @@ import com.fox.factory.service.mappers.CommentMapper;
 import com.fox.factory.service.mappers.ProductMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -63,4 +65,23 @@ public class ProductService {
             return repository.save(mapper.partialUpdate1(upd, product));
         }).orElse(null));
     }
+
+    @Transactional
+    public ProductDetailDto findById(Long id){
+        return mapper.toProductDetailDto(repository.findById(id).orElse(null));
+    }
+    @Transactional
+    public  List<ProductListDto> findByCategoriesAndNames(List<CatrgoryDto> catrgoryDtos, String name){
+        var catFiltered = this.findByCategories(catrgoryDtos);
+        return catFiltered.stream().filter(productListDto -> productListDto.getName().toLowerCase().contains(name.toLowerCase())).collect(Collectors.toList());
+    }
+    @Transactional
+    public ProductDetailDto addImageToProduct(Long pid, ProductImage image){
+        return repository.findById(pid)
+                .map(product -> product.addImage(image))
+                .map(o -> repository.save(o))
+                .map(mapper::toProductDetailDto)
+                .orElse(null);
+    }
+
 }

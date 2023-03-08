@@ -12,7 +12,7 @@ import java.util.Set;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "product_id", nullable = false)
     private Long id;
 
     private Float price;
@@ -43,8 +43,9 @@ public class Product {
         this.catrgories.remove(c);
     }
 
-    public void addImage(ProductImage image){
+    public Product addImage(ProductImage image){
         this.productImageSet.add(image);
+        return this;
     }
 
     public void removeImage(ProductImage image){

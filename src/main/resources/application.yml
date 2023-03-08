@@ -1,0 +1,36 @@
+server:
+  port: ${PORT:8000}
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/javaCW
+    driverClassName: org.postgresql.Driver
+    username: Fox
+    password: 123
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.office365.com
+    port: 587
+    username: sharaga1937@outlook.com
+    password: there_is_no_password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+jwt:
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+  token:
+    validity-time: ${JWT_TOKEN_VALIDITY:86400000} # 24 hours
+
+springdoc:
+  packages-to-scan: factory

@@ -1,0 +1,66 @@
+<configuration scan="2 minutes">
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level%logger{36}  -%kvp – %msg%n</pattern>
+        </encoder>
+
+    </appender>
+
+    <appender name="FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>generalapplication.log</file>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>generalapplication.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>40</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35}– %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="WARN_LOGGER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>warn_application.log</file>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>warn_application.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>50</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35}– %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARING</level>
+        </filter>
+    </appender>
+
+    <!--    <appender name="DEBUG_LOGGER" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <!--        <file>debug.log</file>-->
+    <!--        <rollingPolicy-->
+    <!--                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+    <!--            <fileNamePattern>debug.%d{yyyy-MM-dd}.gz</fileNamePattern>-->
+    <!--            <maxHistory>20</maxHistory>-->
+    <!--            <totalSizeCap>3GB</totalSizeCap>-->
+    <!--        </rollingPolicy>-->
+    <!--        <encoder>-->
+    <!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35}– %msg%n</pattern>-->
+    <!--        </encoder>-->
+    <!--    </appender>-->
+
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="WARN_LOGGER"/>
+    </root>
+    <!--    <root level="warn">-->
+    <!--        <appender-ref ref="WARN_LOGGER"/>-->
+    <!--    </root>-->
+    <!--    <root level="debug">-->
+    <!--        <appender-ref ref="DEBUG_LOGGER"/>-->
+    <!--    </root>-->
+
+</configuration>

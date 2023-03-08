@@ -3,6 +3,7 @@ package com.fox.factory.entities.dto;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NonNull;
 
 import java.io.Serializable;
 
@@ -14,6 +15,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class CatrgoryDto implements Serializable {
     private Long id;
+    @NonNull
     private String title;
     private String slug;
 }

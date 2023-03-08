@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,26 +30,35 @@ public class AttendanceTicketService {
         return mapper.toDto(attendanceTicketRepository.findById(id).orElse(null));
     }
     @Transactional
-    public List<AttendanceTicketDto> findAllByDate(Date date){
+    public List<AttendanceTicketDto> findAllByDate(LocalDate date){
         return attendanceTicketRepository.findAllByAttandenceDate(date).stream().map(mapper::toDto).collect(Collectors.toList());
     }
     @Transactional
-    public List<AttendanceTicketDto> findByDateBetween(Date fromDate, Date toDate){
+    public List<AttendanceTicketDto> findByDateBetween(LocalDate fromDate, LocalDate toDate){
         return attendanceTicketRepository.findAllByAttandenceDateBetween(fromDate, toDate).stream().map(mapper::toDto).collect(Collectors.toList());
     }
     @Transactional
     public AttendanceTicketDto updateTicket(Long id, AttendanceTicketDto upInst){
-        var ticket = attendanceTicketRepository.findById(id).orElse(null);
-        if (ticket==null)
-            return null;
-
-        return mapper.toDto(attendanceTicketRepository.save(
-                mapper.partialUpdate(upInst, ticket)
-        ));
+        return attendanceTicketRepository.findById(id)
+                .map(attendanceTicket -> mapper.partialUpdate(upInst, attendanceTicket))
+                .map(attendanceTicketRepository::save)
+                .map(mapper::toDto)
+                .orElse(null);
+//        var ticket = attendanceTicketRepository.findById(id).orElse(null);
+//        if (ticket==null)
+//            return null;
+//
+//        return mapper.toDto(attendanceTicketRepository.save(
+//                mapper.partialUpdate(upInst, ticket)
+//        ));
 
     }
     @Transactional
     public void delete(Long id){
         attendanceTicketRepository.deleteById(id);
+    }
+    @Transactional
+    public List<AttendanceTicketDto> findByUserId(Long uid){
+        return attendanceTicketRepository.findAllByUser_Id(uid).stream().map(mapper::toDto).collect(Collectors.toList());
     }
 }
