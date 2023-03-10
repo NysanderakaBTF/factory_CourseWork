@@ -11,6 +11,7 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
+@Table(name = "shop_orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +19,7 @@ public class Order {
     private Long id;
 
     @ManyToOne
-    @NotNull
+    @JoinColumn(referencedColumnName = "user_id")
     private User user;
     @OneToMany
     private Set<OrderItem> itemSet;

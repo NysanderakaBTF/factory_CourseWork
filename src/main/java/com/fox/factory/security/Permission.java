@@ -12,7 +12,11 @@ public enum Permission {
     MANAGE_ALL_RESOURCES("manage_all_resources"),
     MANAGE_APPLICATION("manage_application"),
     MANAGE_USERS("manage_users"),
-    GET_SECURED_INFO("get_secured_info");
+    GET_SECURED_INFO("get_secured_info"),
+    READ("read"),
+    DELETE_COMMENTS("delete_comments"),
+    WRITE("write");
+
 
 
     private final String permission;

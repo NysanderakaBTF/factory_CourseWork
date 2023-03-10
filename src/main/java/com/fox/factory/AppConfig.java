@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.models.OpenAPI;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -16,6 +17,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableJpaRepositories
+@EntityScan("com.fox.factory.entities")
 @EnableAspectJAutoProxy
 public class AppConfig {
     @Bean

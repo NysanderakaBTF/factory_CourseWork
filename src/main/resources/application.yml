@@ -1,6 +1,8 @@
 server:
   port: ${PORT:8000}
 spring:
+  main:
+    allow-circular-references: true
   datasource:
     url: jdbc:postgresql://localhost/javaCW
     driverClassName: org.postgresql.Driver
@@ -26,11 +28,11 @@ spring:
           auth: true
           starttls:
             enable: true
-
+  security:
+    user:
+      name: admin
+      password: password
 jwt:
   secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
   token:
     validity-time: ${JWT_TOKEN_VALIDITY:86400000} # 24 hours
-
-springdoc:
-  packages-to-scan: factory

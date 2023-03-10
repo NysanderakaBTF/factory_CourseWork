@@ -13,11 +13,12 @@ import org.springframework.lang.Nullable;
 import java.util.Objects;
 import java.util.Set;
 
-@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "customer")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +29,7 @@ public class User {
     private Set<Comment> usersComments;
 
     @OneToMany
+    @JoinColumn
     private Set<Order> orders;
 
     @OneToMany

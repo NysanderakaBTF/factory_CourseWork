@@ -34,7 +34,7 @@ public class ProductController {
     }
 
     @Operation(summary = "View Product Details")
-    @DeleteMapping("/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<ProductDetailDto> getProduct(@PathVariable Long id){
         return ResponseEntity.ok(service.findById(id));
     }

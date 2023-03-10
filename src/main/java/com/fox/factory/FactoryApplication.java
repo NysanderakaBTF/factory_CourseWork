@@ -1,6 +1,6 @@
 package com.fox.factory;
 
-import org.springdoc.core.GroupedOpenApi;
+import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -16,17 +16,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableAsync
 @EnableScheduling
-
 public class FactoryApplication {
     public static void main(String[] args) {
         SpringApplication.run(FactoryApplication.class, args);
     }
-    @Bean
-    public GroupedOpenApi publicApi() {
-        return GroupedOpenApi.builder()
-                .group("springshop-public")
-                .pathsToMatch("/public/**")
-                .build();
-    }
-
 }

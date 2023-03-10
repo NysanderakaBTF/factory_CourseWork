@@ -4,7 +4,9 @@ import com.fox.factory.entities.dto.AttendanceTicketDto;
 import com.fox.factory.service.AttendanceTicketService;
 import com.fox.factory.service.MyEmailService;
 import com.fox.factory.service.mappers.AttendanceTicketMapper;
+
 import io.swagger.v3.oas.annotations.Operation;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
+
 
 @Validated
 @RestController
