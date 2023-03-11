@@ -18,7 +18,7 @@ public class ProductDetailDto implements Serializable {
     private final Long id;
     private final Float price;
     private final String name;
-    private final Set<ProductImageDto> productImageSet;
+    private final Set<ProductImageDto1> productImageSet;
     private final String description;
     private final Set<CatrgoryDto> catrgories;
     private final Float rating;

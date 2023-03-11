@@ -1,18 +1,25 @@
 package com.fox.factory.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProductImage  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     @Lob
-    @Column(name = "data")
+    @Column(name = "data", unique = false, nullable = false, length = 100000)
     private byte[] data;
+    @Column
+    private String name;
+
+    @Column(name = "type")
+    private String type;
 }

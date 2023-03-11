@@ -15,3 +15,764 @@
 00:09:18.084 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl– HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 00:09:18.211 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
 00:09:18.215 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+19:59:17.190 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+19:59:17.242 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 30664 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+19:59:17.244 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+19:59:17.300 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:59:17.300 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:59:18.111 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:59:18.199 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 80 ms. Found 8 JPA repository interfaces.
+19:59:19.299 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+19:59:19.306 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+19:59:19.307 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+19:59:19.307 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+19:59:19.363 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+19:59:19.364 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2063 ms
+19:59:19.660 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+19:59:19.706 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+19:59:19.951 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+19:59:20.099 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@247ff0da
+19:59:20.101 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+19:59:20.131 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:59:21.187 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.187 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_nxfflmpxsad4utm40mqpux2uo" в таблице "catrgory" не существует, пропускается
+19:59:21.191 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.192 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_pe2syrxrcm3a4s258eyjspn9b" в таблице "catrgory" не существует, пропускается
+19:59:21.195 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.196 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_1mjivby0f6d2ho11x6rlum81f" в таблице "comment_sub_comments" не существует, пропускается
+19:59:21.199 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.200 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_dwk6cx0afu8bs9o4t536v1j5v" в таблице "customer" не существует, пропускается
+19:59:21.204 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.204 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_irnrrncatp2fvw52vp45j7rlw" в таблице "customer" не существует, пропускается
+19:59:21.208 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.208 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_eam6my5rg3njhj27u4hfjjnod" в таблице "customer_tickets" не существует, пропускается
+19:59:21.212 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.213 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_lmt8c8gxybvkubxq4p9vr24j1" в таблице "customer_users_comments" не существует, пропускается
+19:59:21.216 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.217 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_qh0mhsbku34k789m85831cytw" в таблице "product_comments" не существует, пропускается
+19:59:21.220 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.220 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_l9pwpn8j3tkm5oay7lh46cnvd" в таблице "product_product_image_set" не существует, пропускается
+19:59:21.224 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– SQL Warning Code: 0, SQLState: 00000
+19:59:21.224 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper– ограничение "uk_lth6091twteddi1eirmyux5da" в таблице "shop_orders_item_set" не существует, пропускается
+19:59:21.274 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:59:21.282 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:59:22.180 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:59:23.149 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+19:59:23.216 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41289006, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cc9d55, org.springframework.security.web.context.SecurityContextHolderFilter@701e3314, org.springframework.security.web.header.HeaderWriterFilter@4e788001, org.springframework.security.web.authentication.logout.LogoutFilter@12dd6da7, com.fox.factory.security.JwtAuthenticationFilter@2442e57a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74a61bc9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@589f3fb1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73a9fd0d, org.springframework.security.web.session.SessionManagementFilter@4f3af1e2, org.springframework.security.web.access.ExceptionTranslationFilter@c6f9fe4, org.springframework.security.web.access.intercept.AuthorizationFilter@79270046]
+19:59:23.734 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+19:59:23.787 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+19:59:23.807 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+19:59:23.824 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 6.96 seconds (process running for 7.908)
+19:59:24.070 [RMI TCP Connection(4)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:59:24.070 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+19:59:24.071 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 1 ms
+20:02:32.860 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:02:32.865 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:02:32.868 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:02:44.277 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:02:44.328 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 8772 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:02:44.329 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:02:44.380 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:02:44.380 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:02:45.183 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:02:45.278 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 87 ms. Found 8 JPA repository interfaces.
+20:02:46.425 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:02:46.432 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:02:46.433 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:02:46.433 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:02:46.489 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:02:46.489 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2108 ms
+20:02:46.788 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:02:46.831 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:02:47.076 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:02:47.216 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@634957ea
+20:02:47.218 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:02:47.247 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:02:48.420 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:02:48.429 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:02:49.326 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:02:50.269 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:02:50.335 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4441c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@183b3555, org.springframework.security.web.context.SecurityContextHolderFilter@595fba86, org.springframework.security.web.header.HeaderWriterFilter@6e708874, org.springframework.security.web.authentication.logout.LogoutFilter@6bd1cb15, com.fox.factory.security.JwtAuthenticationFilter@783d6e87, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49d0c415, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5cad62cb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11f32d2b, org.springframework.security.web.session.SessionManagementFilter@1f59c135, org.springframework.security.web.access.ExceptionTranslationFilter@7f56323c, org.springframework.security.web.access.intercept.AuthorizationFilter@67ffe30e]
+20:02:50.860 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:02:50.914 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:02:50.936 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:02:50.954 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 7.012 seconds (process running for 7.871)
+20:02:51.461 [RMI TCP Connection(4)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:02:51.461 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:02:51.463 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 2 ms
+20:03:48.144 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:03:48.149 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:03:48.152 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:03:58.993 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:03:59.048 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 28176 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:03:59.049 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:03:59.099 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:03:59.100 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:03:59.880 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:03:59.972 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 84 ms. Found 8 JPA repository interfaces.
+20:04:01.101 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:04:01.109 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:04:01.110 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:04:01.110 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:04:01.165 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:04:01.166 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2066 ms
+20:04:01.458 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:04:01.502 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:04:01.743 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:04:01.887 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e0e62d8
+20:04:01.889 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:04:01.918 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:04:03.083 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:04:03.092 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:04:03.956 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:04:04.962 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:04:05.032 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7606f912, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5190ec63, org.springframework.security.web.context.SecurityContextHolderFilter@d1c510f, org.springframework.security.web.header.HeaderWriterFilter@672c8d58, org.springframework.security.web.authentication.logout.LogoutFilter@1a51fed0, com.fox.factory.security.JwtAuthenticationFilter@2f01a0cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b3000f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f3314e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6407d322, org.springframework.security.web.session.SessionManagementFilter@1a60258e, org.springframework.security.web.access.ExceptionTranslationFilter@8d730e1, org.springframework.security.web.access.intercept.AuthorizationFilter@c25628b]
+20:04:05.570 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:04:05.635 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:04:05.654 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:04:05.671 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 7.013 seconds (process running for 7.942)
+20:04:06.084 [RMI TCP Connection(1)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:04:06.084 [RMI TCP Connection(1)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:04:06.086 [RMI TCP Connection(1)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 2 ms
+20:05:19.995 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.data.rest.webmvc.RepositorySchemaController
+20:05:20.096 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.data.rest.webmvc.alps.AlpsController
+20:05:20.099 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.data.rest.webmvc.ProfileController
+20:05:20.108 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.data.rest.webmvc.RepositoryEntityController
+20:05:20.426 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController
+20:05:22.765 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.fox.factory.controllres.UserInfAuthController
+20:05:22.793 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.fox.factory.controllres.AttendanceTicketController
+20:05:22.797 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.fox.factory.controllres.ProductController
+20:05:22.804 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.fox.factory.controllres.OrderItemController
+20:05:22.809 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.fox.factory.controllres.OrderController
+20:05:22.816 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.fox.factory.controllres.CommentController
+20:05:22.869 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.fox.factory.controllres.ProductImageController
+20:05:22.875 [http-nio-8000-exec-9] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer– Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.fox.factory.controllres.CategoryController
+20:05:22.941 [http-nio-8000-exec-9] INFO  o.s.api.AbstractOpenApiResource– Init duration for springdoc-openapi is: 3074 ms
+20:08:03.486 [http-nio-8000-exec-4] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 297 method execution(public com.fox.factory.entities.User com.fox.factory.service.UserService.save(com.fox.factory.entities.dto.UserDetailDto))
+20:08:03.513 [http-nio-8000-exec-4] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 15 method execution(public java.lang.String com.fox.factory.service.JwtService.generateToken(com.fox.factory.entities.User))
+20:08:03.513 [http-nio-8000-exec-4] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 332 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.register(com.fox.factory.entities.dto.UserDetailDto))
+20:15:19.392 [http-nio-8000-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver– Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.fox.factory.entities.dto.security.Token com.fox.factory.controllres.UserInfAuthController.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto)]
+20:16:42.104 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:16:42.107 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:16:42.110 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:17:09.754 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:17:09.812 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 31732 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:17:09.813 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:17:09.862 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:17:09.863 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:17:10.683 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:17:10.776 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 83 ms. Found 8 JPA repository interfaces.
+20:17:11.929 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:17:11.936 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:17:11.936 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:17:11.937 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:17:11.992 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:17:11.992 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2129 ms
+20:17:12.294 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:17:12.341 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:17:12.601 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:17:12.750 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2103ab38
+20:17:12.752 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:17:12.782 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:17:13.979 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:17:13.988 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:17:14.891 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:17:15.888 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:17:15.959 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5af572a8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63280b1a, org.springframework.security.web.context.SecurityContextHolderFilter@566aad02, org.springframework.security.web.header.HeaderWriterFilter@2af814f4, org.springframework.security.web.authentication.logout.LogoutFilter@15be03d5, com.fox.factory.security.JwtAuthenticationFilter@50979547, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c6a4d83, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31bbfb8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34d442f0, org.springframework.security.web.session.SessionManagementFilter@1f4d8ad2, org.springframework.security.web.access.ExceptionTranslationFilter@73a69af5, org.springframework.security.web.access.intercept.AuthorizationFilter@23d356ea]
+20:17:16.498 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:17:16.552 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:17:16.575 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:17:16.592 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 7.179 seconds (process running for 8.077)
+20:17:16.902 [RMI TCP Connection(6)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:17:16.903 [RMI TCP Connection(6)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:17:16.905 [RMI TCP Connection(6)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 2 ms
+20:17:27.020 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 297 method execution(public com.fox.factory.entities.User com.fox.factory.service.UserService.save(com.fox.factory.entities.dto.UserDetailDto))
+20:17:27.051 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 18 method execution(public java.lang.String com.fox.factory.service.JwtService.generateToken(com.fox.factory.entities.User))
+20:17:27.051 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 335 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.register(com.fox.factory.entities.dto.UserDetailDto))
+20:17:46.864 [http-nio-8000-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver– Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.fox.factory.entities.dto.security.Token com.fox.factory.controllres.UserInfAuthController.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto)]
+20:18:49.057 [http-nio-8000-exec-3] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 101 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:18:49.060 [http-nio-8000-exec-3] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:18:49.060 [http-nio-8000-exec-3] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 169 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:23:25.769 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:23:25.772 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:23:25.774 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:24:04.308 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:24:04.369 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 20876 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:24:04.370 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:24:04.423 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:24:04.423 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:24:05.377 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:24:05.486 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 99 ms. Found 8 JPA repository interfaces.
+20:24:08.015 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:24:08.029 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:24:08.030 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:24:08.031 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:24:08.098 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:24:08.098 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 3674 ms
+20:24:08.438 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:24:08.491 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:24:08.778 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:24:08.940 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a67b539
+20:24:08.943 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:24:08.977 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:24:10.407 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:24:10.424 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:24:11.566 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:24:12.791 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:24:12.889 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@49c7122f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cdbe49c, org.springframework.security.web.context.SecurityContextHolderFilter@665624ee, org.springframework.security.web.header.HeaderWriterFilter@78e564f9, org.springframework.security.web.authentication.logout.LogoutFilter@2f2eae71, com.fox.factory.security.JwtAuthenticationFilter@14c5c77a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3dfda099, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@692932af, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24c9562a, org.springframework.security.web.session.SessionManagementFilter@384da054, org.springframework.security.web.access.ExceptionTranslationFilter@22d86228, org.springframework.security.web.access.intercept.AuthorizationFilter@a0dfe9d]
+20:24:13.519 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:24:13.588 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:24:13.611 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:24:13.630 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 9.676 seconds (process running for 40.898)
+20:24:22.913 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:24:22.916 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:24:22.919 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:25:11.667 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:25:11.728 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 21484 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:25:11.729 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:25:11.782 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:25:11.783 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:25:12.659 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:25:12.768 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 98 ms. Found 8 JPA repository interfaces.
+20:25:14.016 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:25:14.025 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:25:14.026 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:25:14.026 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:25:14.084 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:25:14.084 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2301 ms
+20:25:14.425 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:25:14.477 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:25:14.757 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:25:14.914 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7258bd5e
+20:25:14.917 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:25:14.949 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:25:16.285 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:25:16.296 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:25:17.284 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:25:18.349 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:25:18.425 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@58d5403, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fd8ffca, org.springframework.security.web.context.SecurityContextHolderFilter@5a474b81, org.springframework.security.web.header.HeaderWriterFilter@4c1056e2, org.springframework.security.web.authentication.logout.LogoutFilter@6636eac7, com.fox.factory.security.JwtAuthenticationFilter@38798a49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@239447d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@551c57cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a377360, org.springframework.security.web.session.SessionManagementFilter@47c70283, org.springframework.security.web.access.ExceptionTranslationFilter@3c38e33c, org.springframework.security.web.access.intercept.AuthorizationFilter@302d544c]
+20:25:19.013 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:25:19.076 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:25:19.099 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:25:19.117 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 7.81 seconds (process running for 9.044)
+20:25:19.552 [RMI TCP Connection(2)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:25:19.553 [RMI TCP Connection(2)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:25:19.554 [RMI TCP Connection(2)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 1 ms
+20:26:03.171 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s150ms145µs900ns).
+20:27:35.738 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 566 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:27:53.694 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:27:57.146 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 101313 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:28:12.378 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:28:12.382 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:28:12.385 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:28:22.354 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:28:22.425 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 21756 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:28:22.426 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:28:22.491 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:28:22.491 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:28:23.414 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:28:23.526 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 101 ms. Found 8 JPA repository interfaces.
+20:28:24.803 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:28:24.812 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:28:24.813 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:28:24.813 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:28:24.878 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:28:24.879 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2386 ms
+20:28:25.236 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:28:25.291 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:28:25.604 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:28:25.767 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e5d78d5
+20:28:25.769 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:28:25.804 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:28:27.189 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:28:27.200 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:28:28.220 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:28:29.335 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:28:29.413 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4202c7a9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55de5326, org.springframework.security.web.context.SecurityContextHolderFilter@4c36ad31, org.springframework.security.web.header.HeaderWriterFilter@4faeb565, org.springframework.security.web.authentication.logout.LogoutFilter@1647d88a, com.fox.factory.security.JwtAuthenticationFilter@12085a9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@415af0b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1beda9b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32dcd8f0, org.springframework.security.web.session.SessionManagementFilter@406eb2f9, org.springframework.security.web.access.ExceptionTranslationFilter@779a6aeb, org.springframework.security.web.access.intercept.AuthorizationFilter@2ff70788]
+20:28:30.043 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:28:30.111 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:28:30.134 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:28:30.153 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.342 seconds (process running for 9.804)
+20:28:30.697 [RMI TCP Connection(3)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:28:30.698 [RMI TCP Connection(3)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:28:30.700 [RMI TCP Connection(3)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 2 ms
+20:33:38.977 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m39s973ms317µs300ns).
+20:33:49.539 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 566 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:33:49.625 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:33:49.625 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 300567 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:34:21.654 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:34:21.658 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:34:21.660 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:40:29.112 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:40:29.166 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 14212 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:40:29.167 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:40:29.223 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:40:29.223 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:40:30.142 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:40:30.279 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 124 ms. Found 8 JPA repository interfaces.
+20:40:31.706 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:40:31.720 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:40:31.720 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:40:31.721 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:40:31.786 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:40:31.786 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2562 ms
+20:40:32.110 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:40:32.161 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:40:32.441 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:40:32.601 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@104030c7
+20:40:32.603 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:40:32.635 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:40:34.100 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:40:34.110 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:40:35.204 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:40:36.298 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:40:36.375 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5190ec63, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6407d322, org.springframework.security.web.context.SecurityContextHolderFilter@16cb4977, org.springframework.security.web.header.HeaderWriterFilter@751bd021, org.springframework.security.web.authentication.logout.LogoutFilter@31654915, com.fox.factory.security.JwtAuthenticationFilter@28a02306, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f3314e4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4048bc24, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c0723d8, org.springframework.security.web.session.SessionManagementFilter@1a3ee515, org.springframework.security.web.access.ExceptionTranslationFilter@16e1edd, org.springframework.security.web.access.intercept.AuthorizationFilter@7c993764]
+20:40:36.946 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:40:37.010 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:40:37.034 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:40:37.054 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.298 seconds (process running for 9.276)
+20:40:37.650 [RMI TCP Connection(4)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:40:37.650 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:40:37.652 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 1 ms
+20:40:46.248 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 124 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:40:46.268 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:40:46.268 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 221 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:41:10.921 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:41:10.925 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:41:10.928 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:41:25.553 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:41:25.621 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 29204 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:41:25.623 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:41:25.688 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:41:25.688 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:41:26.714 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:41:26.821 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 95 ms. Found 8 JPA repository interfaces.
+20:41:28.238 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:41:28.250 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:41:28.250 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:41:28.251 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:41:28.315 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:41:28.316 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2627 ms
+20:41:28.704 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:41:28.762 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:41:29.093 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:41:29.267 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1ef55d04
+20:41:29.269 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:41:29.306 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:41:30.769 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:41:30.782 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:41:31.851 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:41:32.969 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:41:33.048 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@74cc1ec6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ec72a22, org.springframework.security.web.context.SecurityContextHolderFilter@39457192, org.springframework.security.web.header.HeaderWriterFilter@6b16a28b, org.springframework.security.web.authentication.logout.LogoutFilter@2463bbde, com.fox.factory.security.JwtAuthenticationFilter@27a23e0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@386b270c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@679e85dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@587af768, org.springframework.security.web.session.SessionManagementFilter@5d78f530, org.springframework.security.web.access.ExceptionTranslationFilter@128843d5, org.springframework.security.web.access.intercept.AuthorizationFilter@93c7bb6]
+20:41:33.704 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:41:33.778 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:41:33.806 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:41:33.827 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.702 seconds (process running for 9.942)
+20:41:34.297 [RMI TCP Connection(4)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:41:34.297 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:41:34.299 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 2 ms
+20:44:08.024 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 151 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:44:08.044 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:44:08.044 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 11016 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:46:52.186 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:46:52.190 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:46:52.193 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:46:57.293 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:46:57.351 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 21028 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:46:57.353 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:46:57.410 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:46:57.410 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:46:58.288 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:46:58.385 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 88 ms. Found 8 JPA repository interfaces.
+20:46:59.695 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:46:59.703 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:46:59.704 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:46:59.704 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:46:59.767 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:46:59.768 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2356 ms
+20:47:00.100 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:47:00.156 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:47:00.436 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:47:00.601 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@634957ea
+20:47:00.603 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:47:00.636 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:47:01.997 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:47:02.006 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:47:02.988 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:47:04.051 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:47:04.122 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@67acf746, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fbe14ed, org.springframework.security.web.context.SecurityContextHolderFilter@467eeb3, org.springframework.security.web.header.HeaderWriterFilter@418d2aac, org.springframework.security.web.authentication.logout.LogoutFilter@7151c4c3, com.fox.factory.security.JwtAuthenticationFilter@783d6e87, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7cd4eadc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17ffddec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cab5bbc, org.springframework.security.web.session.SessionManagementFilter@49d0c415, org.springframework.security.web.access.ExceptionTranslationFilter@9ddc7c, org.springframework.security.web.access.intercept.AuthorizationFilter@11f32d2b]
+20:47:04.699 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:47:04.772 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:47:04.795 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:47:04.815 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 7.914 seconds (process running for 8.946)
+20:47:05.087 [RMI TCP Connection(2)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:47:05.088 [RMI TCP Connection(2)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:47:05.089 [RMI TCP Connection(2)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 1 ms
+20:47:20.285 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 171 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:47:20.316 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:47:20.317 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 285 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:47:24.888 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:47:24.892 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:47:24.895 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:47:29.436 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:47:29.498 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 30052 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:47:29.499 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:47:29.558 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:47:29.560 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:47:30.532 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:47:30.649 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 104 ms. Found 8 JPA repository interfaces.
+20:47:31.994 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:47:32.002 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:47:32.003 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:47:32.003 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:47:32.065 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:47:32.065 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2504 ms
+20:47:32.471 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:47:32.531 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:47:32.964 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:47:33.234 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4f09736
+20:47:33.238 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:47:33.279 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:47:34.792 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:47:34.803 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:47:35.849 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:47:36.971 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:47:37.051 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f1f7ca8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5646176d, org.springframework.security.web.context.SecurityContextHolderFilter@6fa1a316, org.springframework.security.web.header.HeaderWriterFilter@56770982, org.springframework.security.web.authentication.logout.LogoutFilter@4e85b833, com.fox.factory.security.JwtAuthenticationFilter@3620cf4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b8c2b50, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bf4c636, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50f0cf29, org.springframework.security.web.session.SessionManagementFilter@6d6dadaf, org.springframework.security.web.access.ExceptionTranslationFilter@7d7e0eff, org.springframework.security.web.access.intercept.AuthorizationFilter@25518432]
+20:47:37.666 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:47:37.740 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:47:37.764 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:47:37.786 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.734 seconds (process running for 9.9)
+20:47:38.339 [RMI TCP Connection(6)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:47:38.340 [RMI TCP Connection(6)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:47:38.341 [RMI TCP Connection(6)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 1 ms
+20:47:49.944 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 142 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:47:49.967 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:47:49.967 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 3616 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:48:00.334 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:48:00.339 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:48:00.342 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:49:45.177 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:49:45.252 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 7796 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:49:45.254 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:49:45.311 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:49:45.312 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:49:46.288 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:49:46.405 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 106 ms. Found 8 JPA repository interfaces.
+20:49:47.777 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:49:47.787 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:49:47.787 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:49:47.788 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:49:47.853 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:49:47.853 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2540 ms
+20:49:48.239 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:49:48.299 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:49:48.598 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:49:48.765 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7053d374
+20:49:48.767 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:49:48.801 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:49:50.254 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:49:50.266 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:49:51.314 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:49:52.429 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:49:52.507 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4929284c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b6eae69, org.springframework.security.web.context.SecurityContextHolderFilter@31bbeff0, org.springframework.security.web.header.HeaderWriterFilter@2010f8db, org.springframework.security.web.authentication.logout.LogoutFilter@3ad25945, com.fox.factory.security.JwtAuthenticationFilter@4e651d9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24003d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5253b907, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9dbb88b, org.springframework.security.web.session.SessionManagementFilter@739b7111, org.springframework.security.web.access.ExceptionTranslationFilter@e86d560, org.springframework.security.web.access.intercept.AuthorizationFilter@3263a6a]
+20:49:53.136 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:49:53.203 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:49:53.226 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:49:53.245 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.454 seconds (process running for 9.637)
+20:49:53.423 [RMI TCP Connection(4)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:49:53.423 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:49:53.425 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 1 ms
+20:50:22.558 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 165 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:51:03.636 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:51:03.636 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 55981 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:51:03.697 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:51:03.702 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:51:03.704 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:52:12.766 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:52:12.835 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 18736 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:52:12.836 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:52:12.905 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:52:12.905 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:52:13.924 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:52:14.038 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 103 ms. Found 8 JPA repository interfaces.
+20:52:15.508 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:52:15.520 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:52:15.521 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:52:15.521 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:52:15.585 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:52:15.585 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2679 ms
+20:52:15.972 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:52:16.038 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:52:16.358 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:52:16.630 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@23004d9a
+20:52:16.632 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:52:16.668 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:52:18.078 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:52:18.090 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:52:18.496 [restartedMain] ERROR o.s.b.w.e.tomcat.TomcatStarter– Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\kave7\IdeaProjects\factory\target\classes\com\fox\factory\security\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailServiceImpl' defined in file [C:\Users\kave7\IdeaProjects\factory\target\classes\com\fox\factory\security\UserDetailServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userService' defined in file [C:\Users\kave7\IdeaProjects\factory\target\classes\com\fox\factory\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 2: No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+20:52:18.523 [restartedMain] INFO  o.a.catalina.core.StandardService– Stopping service [Tomcat]
+20:52:18.527 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase– The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+20:52:18.528 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase– The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+20:52:18.531 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext– Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+20:52:18.531 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:52:18.535 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:52:18.538 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:52:18.557 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger– 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+20:52:18.594 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter– 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 2 of constructor in com.fox.factory.service.UserService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+20:53:00.038 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:53:00.108 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 7880 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:53:00.110 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:53:00.181 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:53:00.181 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:53:01.197 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:53:01.307 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 96 ms. Found 8 JPA repository interfaces.
+20:53:02.728 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:53:02.738 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:53:02.738 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:53:02.739 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:53:02.801 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:53:02.801 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2619 ms
+20:53:03.199 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:53:03.258 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:53:03.577 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:53:03.751 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52f1c9f7
+20:53:03.753 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:53:03.788 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:53:05.251 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:53:05.264 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:53:06.313 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:53:07.448 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:53:07.529 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40364fc9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4684afc6, org.springframework.security.web.context.SecurityContextHolderFilter@2712bc27, org.springframework.security.web.header.HeaderWriterFilter@46ebbe04, org.springframework.security.web.authentication.logout.LogoutFilter@36741879, com.fox.factory.security.JwtAuthenticationFilter@22af731a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@508da401, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33017f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@392d2e64, org.springframework.security.web.session.SessionManagementFilter@3b63eecb, org.springframework.security.web.access.ExceptionTranslationFilter@17aee4f7, org.springframework.security.web.access.intercept.AuthorizationFilter@1112e4c5]
+20:53:08.168 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:53:08.238 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:53:08.263 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:53:08.283 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.673 seconds (process running for 9.898)
+20:53:08.432 [RMI TCP Connection(7)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:53:08.432 [RMI TCP Connection(7)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:53:08.434 [RMI TCP Connection(7)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 2 ms
+20:53:09.844 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:53:09.849 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:53:09.851 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:53:45.440 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:53:45.507 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 18936 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:53:45.508 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:53:45.568 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:53:45.569 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:53:46.509 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:53:46.628 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 106 ms. Found 8 JPA repository interfaces.
+20:53:48.042 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:53:48.053 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:53:48.054 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:53:48.054 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:53:48.120 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:53:48.120 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2551 ms
+20:53:48.530 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:53:48.585 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:53:48.893 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:53:49.060 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@33870b27
+20:53:49.062 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:53:49.096 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:53:50.602 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:53:50.614 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:53:51.717 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:53:52.906 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:53:52.986 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22ba5ea0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5eef40f0, org.springframework.security.web.context.SecurityContextHolderFilter@1fdad973, org.springframework.security.web.header.HeaderWriterFilter@2d616fc, org.springframework.security.web.authentication.logout.LogoutFilter@1480d76, com.fox.factory.security.JwtAuthenticationFilter@4628bd3a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70a310b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78371bdb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65da1c6d, org.springframework.security.web.session.SessionManagementFilter@411b9a2b, org.springframework.security.web.access.ExceptionTranslationFilter@7be005b1, org.springframework.security.web.access.intercept.AuthorizationFilter@58b483a4]
+20:53:53.622 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:53:53.695 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:53:53.721 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:53:53.740 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.66 seconds (process running for 9.899)
+20:53:54.348 [RMI TCP Connection(5)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:53:54.349 [RMI TCP Connection(5)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:53:54.350 [RMI TCP Connection(5)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 1 ms
+20:54:38.061 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s899ms91µs200ns).
+20:54:38.104 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 31542 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:54:46.645 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:54:46.646 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 47333 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:54:48.698 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:54:48.702 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:54:48.705 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:56:33.291 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:56:33.354 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 21820 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:56:33.356 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:56:33.416 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:56:33.417 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:56:34.335 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:56:34.449 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 103 ms. Found 8 JPA repository interfaces.
+20:56:35.770 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:56:35.778 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:56:35.780 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:56:35.781 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:56:35.843 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:56:35.843 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2426 ms
+20:56:36.235 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:56:36.290 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:56:36.592 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:56:36.771 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@45ce767e
+20:56:36.774 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:56:36.813 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:56:38.232 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:56:38.243 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:56:39.279 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:56:40.393 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:56:40.471 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@660f6aac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58ad734a, org.springframework.security.web.context.SecurityContextHolderFilter@29499f46, org.springframework.security.web.header.HeaderWriterFilter@cd76daf, org.springframework.security.web.authentication.logout.LogoutFilter@147fac54, com.fox.factory.security.JwtAuthenticationFilter@1531bdb6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@497893c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f042714, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@306cd413, org.springframework.security.web.session.SessionManagementFilter@442ec310, org.springframework.security.web.access.ExceptionTranslationFilter@755f10b4, org.springframework.security.web.access.intercept.AuthorizationFilter@1155e93e]
+20:56:41.101 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:56:41.169 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:56:41.192 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:56:41.211 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.287 seconds (process running for 9.506)
+20:56:41.689 [RMI TCP Connection(3)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:56:41.689 [RMI TCP Connection(3)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:56:41.691 [RMI TCP Connection(3)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 1 ms
+20:57:12.354 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 14902 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:57:14.559 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:57:14.559 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 25675 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:57:18.318 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:57:18.322 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:57:18.325 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+20:57:58.995 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+20:57:59.068 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 24208 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+20:57:59.070 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+20:57:59.136 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:57:59.136 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:58:00.192 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:58:00.311 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 102 ms. Found 8 JPA repository interfaces.
+20:58:01.757 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+20:58:01.766 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+20:58:01.767 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+20:58:01.767 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+20:58:01.834 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+20:58:01.835 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2699 ms
+20:58:02.251 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+20:58:02.313 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+20:58:02.643 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+20:58:02.838 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@9742bdc
+20:58:02.840 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+20:58:02.879 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:58:04.423 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:58:04.436 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:58:05.518 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:58:06.689 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+20:58:06.766 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7a3c24e3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e47431, org.springframework.security.web.context.SecurityContextHolderFilter@3ab0b1b2, org.springframework.security.web.header.HeaderWriterFilter@321c031b, org.springframework.security.web.authentication.logout.LogoutFilter@68d81fa7, com.fox.factory.security.JwtAuthenticationFilter@137f49ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6cd5a069, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58670a95, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@451f16f2, org.springframework.security.web.session.SessionManagementFilter@3ac9af62, org.springframework.security.web.access.ExceptionTranslationFilter@7a419828, org.springframework.security.web.access.intercept.AuthorizationFilter@4c96b6fb]
+20:58:07.382 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+20:58:07.452 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+20:58:07.482 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+20:58:07.502 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.959 seconds (process running for 10.212)
+20:58:07.838 [RMI TCP Connection(4)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:58:07.839 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+20:58:07.842 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 3 ms
+20:58:52.977 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s34ms888µs100ns).
+20:58:52.984 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 23117 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+20:59:43.792 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s815ms969µs400ns).
+20:59:43.798 [http-nio-8000-exec-1] ERROR c.fox.factory.utils.LoggingAspect– Error occured while timing and executing method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:59:43.799 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 77427 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+20:59:43.856 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+20:59:43.860 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+20:59:43.863 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+21:00:05.901 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+21:00:05.963 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 29048 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+21:00:05.964 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+21:00:06.022 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+21:00:06.022 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+21:00:06.953 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:00:07.077 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 110 ms. Found 8 JPA repository interfaces.
+21:00:08.539 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+21:00:08.551 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+21:00:08.551 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+21:00:08.552 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+21:00:08.617 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+21:00:08.618 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2595 ms
+21:00:09.024 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+21:00:09.080 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+21:00:09.451 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+21:00:09.631 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ec38f99
+21:00:09.634 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+21:00:09.674 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+21:00:11.224 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:00:11.239 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:00:12.314 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:00:13.480 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+21:00:13.560 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@20c10dea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c69ff26, org.springframework.security.web.context.SecurityContextHolderFilter@687112a8, org.springframework.security.web.header.HeaderWriterFilter@7741122, org.springframework.security.web.authentication.logout.LogoutFilter@5e3bd0f5, com.fox.factory.security.JwtAuthenticationFilter@170e0163, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76c19fd7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@790d8e09, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31205a30, org.springframework.security.web.session.SessionManagementFilter@3c7908d2, org.springframework.security.web.access.ExceptionTranslationFilter@400b2e19, org.springframework.security.web.access.intercept.AuthorizationFilter@3fa47216]
+21:00:14.188 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+21:00:14.261 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+21:00:14.285 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+21:00:14.304 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 8.79 seconds (process running for 9.884)
+21:00:14.931 [RMI TCP Connection(7)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:00:14.931 [RMI TCP Connection(7)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+21:00:14.933 [RMI TCP Connection(7)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 2 ms
+21:00:20.654 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 124 method execution(public com.fox.factory.entities.User com.fox.factory.service.UserService.save(com.fox.factory.entities.dto.UserDetailDto))
+21:00:32.463 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 11797 method execution(public java.lang.String com.fox.factory.service.JwtService.generateToken(com.fox.factory.entities.User))
+21:00:32.464 [http-nio-8000-exec-1] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 11943 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.register(com.fox.factory.entities.dto.UserDetailDto))
+21:01:26.734 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s997ms638µs400ns).
+21:01:26.736 [http-nio-8000-exec-3] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 25443 method execution(public java.util.Optional com.fox.factory.service.UserService.findByUsername(java.lang.String))
+21:01:33.324 [http-nio-8000-exec-3] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 2698 method execution(public com.fox.factory.entities.User com.fox.factory.service.UserService.getByUsername(java.lang.String))
+21:01:39.261 [http-nio-8000-exec-3] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 5012 method execution(public java.lang.String com.fox.factory.service.JwtService.generateToken(com.fox.factory.entities.User))
+21:01:39.262 [http-nio-8000-exec-3] INFO  c.fox.factory.utils.LoggingAspect– Execution time (milis) 42626 method execution(public com.fox.factory.entities.dto.security.Token com.fox.factory.service.AuthenticationService.authenticate(com.fox.factory.entities.dto.security.AuthenticationRequestDto))
+21:04:28.530 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+21:04:28.534 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+21:04:28.537 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.
+21:30:00.559 [background-preinit] INFO  o.h.validator.internal.util.Version– HV000001: Hibernate Validator 8.0.0.Final
+21:30:00.609 [restartedMain] INFO  com.fox.factory.FactoryApplication– Starting FactoryApplication using Java 17.0.6 with PID 21968 (C:\Users\kave7\IdeaProjects\factory\target\classes started by kave7 in C:\Users\kave7\IdeaProjects\factory)
+21:30:00.610 [restartedMain] INFO  com.fox.factory.FactoryApplication– No active profile set, falling back to 1 default profile: "default"
+21:30:00.661 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+21:30:00.661 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor– For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+21:30:01.443 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:30:01.536 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate– Finished Spring Data repository scanning in 85 ms. Found 8 JPA repository interfaces.
+21:30:02.651 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat initialized with port(s): 8000 (http)
+21:30:02.659 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Initializing ProtocolHandler ["http-nio-8000"]
+21:30:02.659 [restartedMain] INFO  o.a.catalina.core.StandardService– Starting service [Tomcat]
+21:30:02.659 [restartedMain] INFO  o.a.catalina.core.StandardEngine– Starting Servlet engine: [Apache Tomcat/10.1.5]
+21:30:02.714 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring embedded WebApplicationContext
+21:30:02.715 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext– Root WebApplicationContext: initialization completed in 2054 ms
+21:30:03.008 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper– HHH000204: Processing PersistenceUnitInfo [name: default]
+21:30:03.053 [restartedMain] INFO  org.hibernate.Version– HHH000412: Hibernate ORM core version 6.1.7.Final
+21:30:03.320 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Starting...
+21:30:03.466 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool– HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7dc13168
+21:30:03.468 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Start completed.
+21:30:03.498 [restartedMain] INFO  SQL dialect– HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+21:30:04.686 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator– HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:30:04.694 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:30:05.617 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration– spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:30:06.599 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver– Exposing 1 endpoint(s) beneath base path '/actuator'
+21:30:06.665 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain– Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ff439ea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@495dfd6d, org.springframework.security.web.context.SecurityContextHolderFilter@1fcd5c1c, org.springframework.security.web.header.HeaderWriterFilter@3380b5ca, org.springframework.security.web.authentication.logout.LogoutFilter@1b83f076, com.fox.factory.security.JwtAuthenticationFilter@3e250b5c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ca91f32, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@499a5094, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e0f1408, org.springframework.security.web.session.SessionManagementFilter@67cf9964, org.springframework.security.web.access.ExceptionTranslationFilter@204bf735, org.springframework.security.web.access.intercept.AuthorizationFilter@6f7f3809]
+21:30:07.168 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer– LiveReload server is running on port 35729
+21:30:07.221 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol– Starting ProtocolHandler ["http-nio-8000"]
+21:30:07.241 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer– Tomcat started on port(s): 8000 (http) with context path ''
+21:30:07.258 [restartedMain] INFO  com.fox.factory.FactoryApplication– Started FactoryApplication in 7.021 seconds (process running for 8.136)
+21:30:07.439 [RMI TCP Connection(4)-172.20.64.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]– Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:30:07.439 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Initializing Servlet 'dispatcherServlet'
+21:30:07.441 [RMI TCP Connection(4)-172.20.64.1] INFO  o.s.web.servlet.DispatcherServlet– Completed initialization in 2 ms
+21:51:33.692 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean– Closing JPA EntityManagerFactory for persistence unit 'default'
+21:51:33.695 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown initiated...
+21:51:33.697 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource– HikariPool-1 - Shutdown completed.

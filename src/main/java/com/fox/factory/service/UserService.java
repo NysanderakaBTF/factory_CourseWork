@@ -5,9 +5,11 @@ import com.fox.factory.entities.dto.UserDetailDto;
 import com.fox.factory.entities.dto.UserInCommentDto;
 import com.fox.factory.entities.dto.UserInTicketDto;
 import com.fox.factory.repositories.UserRepository;
+import com.fox.factory.security.Status;
 import com.fox.factory.service.mappers.UserMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,9 +21,12 @@ import java.util.Optional;
 public class UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
+    private final PasswordEncoder encoder;
 
     public Optional<User> findByUsername(String username) {
-        return userRepository.findByUsername(username);
+        var users = userRepository.findAll();
+        var i =  userRepository.findByUsernameIgnoreCase(username);
+        return i;
     }
 
     public User save(User user) {
@@ -29,7 +34,10 @@ public class UserService {
     }
 
     public User save(UserDetailDto userDTO) {
-        return save(userMapper.toEntityDetail(userDTO));
+        var user = userMapper.toEntityDetail(userDTO);
+        user.setPassword(encoder.encode(user.getPassword()));
+        user.setStatus(Status.ACTIVE);
+        return save(user);
     }
 
     public User getByUsername(String username) {

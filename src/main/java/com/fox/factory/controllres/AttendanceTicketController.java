@@ -21,7 +21,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/ticket")
 public class AttendanceTicketController {
-    private final AttendanceTicketMapper mapper;
     private final AttendanceTicketService service;
     private final MyEmailService emailService;
 
@@ -62,14 +61,14 @@ public class AttendanceTicketController {
     }
 
     @Operation(summary = "delete tickeet buy id")
-    @DeleteMapping("/{id}/deelte")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id){
         service.delete(id);
         return ResponseEntity.noContent().build();
     }
 
     @Operation(summary = "update info on existing ticket")
-    @PutMapping("/{id}/update")
+    @PutMapping("/{id}")
     public ResponseEntity<AttendanceTicketDto> update(@PathVariable Long id, @RequestBody AttendanceTicketDto dto){
         return ResponseEntity.ok(
                 service.updateTicket(id, dto)

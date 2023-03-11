@@ -1,16 +1,15 @@
 package com.fox.factory.controllres;
 
 import com.fox.factory.entities.dto.CatrgoryDto;
-import com.fox.factory.entities.dto.ProductListDto;
+
 import com.fox.factory.service.CatrgoryService;
 import com.fox.factory.validation.OnCreate;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
-import org.springframework.data.domain.Page;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +22,7 @@ public class CategoryController {
     private final CatrgoryService service;
 
     @PostMapping("/new")
-    @PreAuthorize("hasAuthority('write') and hasRole('MODERATOR')")
+    @PreAuthorize("hasAuthority('write') and (hasRole('MODERATOR') or hasRole('ADMIN') or hasRole('DEVELOPER'))")
     @Validated(OnCreate.class)
     public ResponseEntity<CatrgoryDto> saveCategory(@Valid @RequestBody CatrgoryDto cat){
         return ResponseEntity.ok(service.create(cat));

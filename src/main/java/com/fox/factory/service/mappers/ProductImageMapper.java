@@ -1,15 +1,23 @@
 package com.fox.factory.service.mappers;
 
 import com.fox.factory.entities.ProductImage;
-import com.fox.factory.entities.dto.ProductImageDto;
+import com.fox.factory.entities.dto.ProductImageDto1;
+import com.fox.factory.entities.dto.ProductImageDto1;
 import org.mapstruct.*;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING)
 public interface ProductImageMapper {
-    ProductImage toEntity(ProductImageDto productImageDto);
+    ProductImage toEntity(ProductImageDto1 ProductImageDto1);
 
-    ProductImageDto toDto(ProductImage productImage);
+    ProductImageDto1 toDto(ProductImage productImage);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    ProductImage partialUpdate(ProductImageDto productImageDto, @MappingTarget ProductImage productImage);
+    ProductImage partialUpdate(ProductImageDto1 ProductImageDto1, @MappingTarget ProductImage productImage);
+
+    ProductImage toEntity1(ProductImageDto1 productImageDto1);
+
+    ProductImageDto1 toDto1(ProductImage productImage);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    ProductImage partialUpdate1(ProductImageDto1 productImageDto1, @MappingTarget ProductImage productImage);
 }
