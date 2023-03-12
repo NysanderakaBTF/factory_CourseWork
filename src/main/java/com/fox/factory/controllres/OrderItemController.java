@@ -31,6 +31,7 @@ public class OrderItemController {
     @Operation(summary = "Delete item in order")
     @DeleteMapping("/{id}/delete")
     public ResponseEntity<OrderDto> deleteItem(@PathVariable Long oid, @PathVariable Long id){
+        orderService.removeOrderItem(oid, id);
         service.delete(id);
         return ResponseEntity.ok(orderService.getByIdDto(oid));
     }

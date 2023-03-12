@@ -6,6 +6,7 @@ import com.fox.factory.entities.dto.ProductImageDto1;
 import com.fox.factory.repositories.ProductImageRepository;
 import com.fox.factory.service.mappers.ProductImageMapper;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,9 +28,10 @@ public class ProductImageService {
     }
     
     @Transactional 
-    public Set<ProductImageDto1> createFromObject(Long pid, ProductImage image){
+    public ProductImageDto1 createFromObject(Long pid, ProductImage image){
         var img = repository.save(image);
-        return productService.addImageToProduct(pid, img).getProductImageSet();
+        productService.addImageToProduct(pid, img);
+        return mapper.toDto(img);
     }
     @Transactional
     public ProductImageDto1 getById(Long id){
@@ -49,9 +51,13 @@ public class ProductImageService {
 //            return null;
 //        return mapper.toDto(repository.save(mapper.partialUpdate(updated, image)));
     }
-
+    //todo: fix complex deletion by changing database constraints and cascade types
     @Transactional
     public void deleteImg(Long id){
+        var image = repository.findById(id).orElseThrow();
+        var product = image.getProduct();
+        product.removeImage(image);
+        productService.saveFormEntity(product);
         repository.deleteById(id);
     }
 

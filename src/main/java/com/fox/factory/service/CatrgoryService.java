@@ -21,7 +21,10 @@ public class CatrgoryService {
 
     @Transactional
     public CatrgoryDto create(CatrgoryDto category) {
-        return mapper.toDto(repository.save(mapper.toEntity(category)));
+        var cat = mapper.toEntity(category);
+        if(cat.getSlug()==null)
+            cat.setSlug(cat.slugify());
+        return mapper.toDto(repository.save(cat));
     }
     @Transactional
     public CatrgoryDto findByTitle(String title) {

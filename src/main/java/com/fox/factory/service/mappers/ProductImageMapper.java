@@ -14,10 +14,4 @@ public interface ProductImageMapper {
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     ProductImage partialUpdate(ProductImageDto1 ProductImageDto1, @MappingTarget ProductImage productImage);
 
-    ProductImage toEntity1(ProductImageDto1 productImageDto1);
-
-    ProductImageDto1 toDto1(ProductImage productImage);
-
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    ProductImage partialUpdate1(ProductImageDto1 productImageDto1, @MappingTarget ProductImage productImage);
 }

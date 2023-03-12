@@ -3,13 +3,15 @@ package com.fox.factory.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Set;
+
 @Entity
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductImage  {
+public class ProductImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -22,4 +24,8 @@ public class ProductImage  {
 
     @Column(name = "type")
     private String type;
+
+    @JoinColumn
+    @ManyToOne
+    private Product product;
 }

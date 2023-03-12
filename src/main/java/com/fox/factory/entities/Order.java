@@ -19,7 +19,7 @@ public class Order {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(referencedColumnName = "user_id")
+    @JoinColumn
     private User user;
     @OneToMany
     private Set<OrderItem> itemSet;

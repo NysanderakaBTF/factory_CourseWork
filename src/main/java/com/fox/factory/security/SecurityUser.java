@@ -38,7 +38,8 @@ public class SecurityUser implements UserDetails {
                 .lastName(user.getLastName())
                 .email(user.getEmail())
                 .username(user.getUsername())
-                .authorities(List.of(new SimpleGrantedAuthority(user.getRole().name())))
+//                .authorities(List.of(new SimpleGrantedAuthority(user.getRole().name())))
+                .authorities(user.getRole().getAuthorities().stream().toList())
                 .isActive(user.getStatus().equals(Status.ACTIVE))
                 .build();
     }
