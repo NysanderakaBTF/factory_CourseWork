@@ -29,6 +29,7 @@ spring:
           starttls:
             enable: true
   security:
+
     user:
       name: admin
       password: password

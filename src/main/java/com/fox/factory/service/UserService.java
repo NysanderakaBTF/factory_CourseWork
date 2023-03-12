@@ -41,7 +41,9 @@ public class UserService {
     }
 
     public User getByUsername(String username) {
-        return findByUsername(username).orElseThrow();
+        var users = userRepository.findAll();
+        var i =  userRepository.findByUsernameIgnoreCase(username).orElseThrow();
+        return i;
     }
 
     public UserDetailDto getById(Long id) {

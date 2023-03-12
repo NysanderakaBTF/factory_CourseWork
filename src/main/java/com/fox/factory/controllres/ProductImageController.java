@@ -6,6 +6,7 @@ import com.fox.factory.entities.dto.ProductImageDto1;
 import com.fox.factory.service.ProductImageService;
 import com.fox.factory.utils.ImageUtil;
 import io.swagger.v3.oas.annotations.Operation;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,25 +18,30 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
 @Validated
 @RestController
-@RequiredArgsConstructor
+@AllArgsConstructor
 @RequestMapping("/api/images")
 public class ProductImageController {
     private ProductImageService service;
     @Operation(summary = "Add image to a product")
-    @PostMapping("/{pid}")
-    public ResponseEntity<Set<ProductImageDto1>> createAndAddImageToProduct(@RequestParam("image") MultipartFile file, @PathVariable Long pid)
+    @PostMapping(value = "/{pid}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<Set<ProductImageDto1>> createAndAddImageToProduct(@RequestParam("image") MultipartFile[] file, @PathVariable Long pid)
          throws IOException {
+        Set<ProductImageDto1> productImageSet = new HashSet<>();
+        for (MultipartFile image: file) {
             ProductImage img = ProductImage.builder()
-                    .name(file.getOriginalFilename())
-                    .type(file.getContentType())
-                    .data(ImageUtil.compressImage(file.getBytes())).build();
+                    .name(image.getOriginalFilename())
+                    .type(image.getContentType())
+                    .data(ImageUtil.compressImage(image.getBytes())).build();
+            productImageSet.add(service.createFromObject(pid, img));
+        }
             return ResponseEntity.status(HttpStatus.OK)
-                    .body(service.createFromObject(pid, img));
+                    .body(productImageSet);
 
     }
 

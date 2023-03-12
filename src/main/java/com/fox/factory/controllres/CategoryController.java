@@ -22,20 +22,21 @@ public class CategoryController {
     private final CatrgoryService service;
 
     @PostMapping("/new")
-    @PreAuthorize("hasAuthority('write') and (hasRole('MODERATOR') or hasRole('ADMIN') or hasRole('DEVELOPER'))")
+//    @PreAuthorize("hasAnyRole('USER','MODERATOR','ADMIN','DEVELOPER')")
+//    @PreAuthorize("hasAuthority('write')")
     @Validated(OnCreate.class)
     public ResponseEntity<CatrgoryDto> saveCategory(@Valid @RequestBody CatrgoryDto cat){
         return ResponseEntity.ok(service.create(cat));
     }
 
     @GetMapping("/all")
-    @PreAuthorize("hasAuthority('read')")
+//    @PreAuthorize("hasAuthority('read')")
     public ResponseEntity<List<CatrgoryDto>> allCats(){
         return ResponseEntity.ok(service.getAll());
     }
 
     @DeleteMapping("/delete/{id}")
-    @PreAuthorize("hasAuthority('write')")
+//    @PreAuthorize("hasAuthority('write')")
     public ResponseEntity<Void> deleteCategory(@PathVariable Long id){
         service.delete(id);
         return ResponseEntity.noContent().build();

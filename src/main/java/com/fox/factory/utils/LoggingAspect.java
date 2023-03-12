@@ -21,7 +21,7 @@ public class LoggingAspect {
         try {
             obj = pjp.proceed();
         }catch (Exception e){
-            log.error("Error occured while timing and executing method "+pjp.toLongString());
+            log.error("Error occured while timing and executing method "+pjp.toLongString()+"MSG: "+e.toString());
             obj = null;
         }
         long stop = System.currentTimeMillis();
