@@ -16,7 +16,11 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 public class SecurityUser implements UserDetails {
+
+    private Long id;
+
     private String username;
+    private String address;
 
     private String password;
 
@@ -33,6 +37,7 @@ public class SecurityUser implements UserDetails {
 
     public static UserDetails fromUser(User user) {
         return SecurityUser.builder()
+                .id(user.getId())
                 .password(user.getPassword())
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
@@ -43,6 +48,16 @@ public class SecurityUser implements UserDetails {
                 .isActive(user.getStatus().equals(Status.ACTIVE))
                 .build();
     }
+
+    public User toUser(){
+        return User.builder()
+                .id(this.id)
+                .address(this.address)
+                .email(this.email)
+                .firstName(this.firstName)
+                .build();
+    }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

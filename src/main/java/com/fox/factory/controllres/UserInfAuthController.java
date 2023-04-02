@@ -58,11 +58,14 @@ public class UserInfAuthController {
                    @ApiResponse(responseCode = FORBIDDEN, description = "No access to this user")
             }
     )
+//    @GetMapping("/{id}")
+//    public ResponseEntity<UserDetailDto> getfullInfo(@PathVariable Long id){
+//        return ResponseEntity.ok(userService.getById(id));
+//    }
     @GetMapping("/{id}")
-    public ResponseEntity<UserDetailDto> getfullInfo(@PathVariable Long id){
-        return ResponseEntity.ok(userService.getById(id));
+    public ResponseEntity<UserDetailDto> getfullInfo(@PathVariable String  id){
+        return ResponseEntity.ok(userService.getDtoByUsername(id));
     }
-
     @Operation(
             summary = "User details update",
             description = "Updates user info and return  full info about user",
@@ -72,7 +75,7 @@ public class UserInfAuthController {
                     @ApiResponse(responseCode = FORBIDDEN, description = "No access to this user")
             }
     )
-    @PutMapping("/{id}/update")
+    @PutMapping("/{id}")
     public ResponseEntity<UserDetailDto> updateInfo (@PathVariable Long id, @RequestBody UserDetailDto dto){
         return ResponseEntity.ok(userService.updateUserInfo(id, dto));
     }
@@ -82,7 +85,7 @@ public class UserInfAuthController {
             summary = "Delete User",
             description = "Deetes user"
     )
-    @DeleteMapping("/{id}/update")
+    @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('write')")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id){
         userService.deleteUser(id);

@@ -20,7 +20,7 @@ public class MyEmailService extends SimpleMailMessage {
             SimpleMailMessage mailMessage = new SimpleMailMessage();
             mailMessage.setFrom("sharaga1937@outlook.com");
             mailMessage.setTo(to);
-            mailMessage.setSubject("Chocolate factory putshace");
+            mailMessage.setSubject("Chocolate factory purshace");
             mailMessage.setText(text);
             javaMailSender.send(mailMessage);
         }catch (Exception e){

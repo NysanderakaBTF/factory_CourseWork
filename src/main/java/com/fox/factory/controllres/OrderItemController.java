@@ -28,6 +28,12 @@ public class OrderItemController {
         return ResponseEntity.ok(orderService.addOrderItem(oid, service.getObjectFromDto(service.create(item))));
     }
 
+    @Operation(summary = "creates order items and adds them to order")
+    @PostMapping("/addbulk")
+    public ResponseEntity<OrderDto> addItemBulk(@PathVariable Long oid, @RequestBody List<OrderItemInListDto> item){
+        return ResponseEntity.ok(orderService.addOrderItem(oid, service.getObjectFromDto(service.create(item))));
+    }
+
     @Operation(summary = "Delete item in order")
     @DeleteMapping("/{id}/delete")
     public ResponseEntity<OrderDto> deleteItem(@PathVariable Long oid, @PathVariable Long id){

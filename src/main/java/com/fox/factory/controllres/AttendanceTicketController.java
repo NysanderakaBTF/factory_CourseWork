@@ -31,7 +31,7 @@ public class AttendanceTicketController {
     }
 
     @Operation(summary = "Get all users tickets")
-    @GetMapping("/{user_id}")
+    @GetMapping("/u/{user_id}")
     public ResponseEntity<List<AttendanceTicketDto>> allTicketsByUser(@PathVariable Long user_id) {
         return ResponseEntity.ok(service.findByUserId(user_id));
     }

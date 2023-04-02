@@ -61,8 +61,11 @@ public class CommentService {
     }
     @Transactional
     public CommentsDto addSubComment(Long id, SubCommentDto sub){
+        var commen = mapper.fromSubCommentDto(sub);
+        commen.setPublishDate(LocalDate.now());
+        final var a = repository.save(commen);
         return repository.findById(id)
-                .map(comment -> comment.addToSubComments(mapper.fromSubCommentDto(sub)))
+                .map(comment -> comment.addToSubComments(a))
                 .map(repository::save)
                 .map(mapper::toDto)
                 .orElse(null);

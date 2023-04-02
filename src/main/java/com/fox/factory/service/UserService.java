@@ -46,6 +46,14 @@ public class UserService {
         return i;
     }
 
+    public UserDetailDto getDtoByUsername(String username) {
+        var users = userRepository.findAll();
+        var i =  userRepository.findByUsernameIgnoreCase(username).orElseThrow();
+        return userMapper.toDetailDto(i);
+    }
+
+
+
     public UserDetailDto getById(Long id) {
         return userMapper.toDetailDto(userRepository.findById(id).orElse(null));
     }

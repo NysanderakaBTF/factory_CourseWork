@@ -18,7 +18,7 @@ public class ProductImage {
     private Long id;
     @Lob
     @Column(name = "data", unique = false, nullable = false, length = 100000)
-    private byte[] data;
+    private String data;
     @Column
     private String name;
 

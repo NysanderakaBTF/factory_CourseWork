@@ -21,7 +21,7 @@ public class Comment {
 
 
     private boolean isPublished;
-    @OneToMany
+    @ManyToMany
     private Set<Comment> subComments;
 
     @ManyToOne

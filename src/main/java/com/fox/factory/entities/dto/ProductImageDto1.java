@@ -14,7 +14,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class ProductImageDto1 implements Serializable {
     private final Long id;
-    private final byte[] data;
+    private final String data;
     private final String name;
     private final String type;
 }

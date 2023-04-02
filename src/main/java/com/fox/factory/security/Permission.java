@@ -3,6 +3,7 @@ package com.fox.factory.security;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.cache.cfg.internal.AbstractDomainDataCachingConfig;
 
 @Getter
 @RequiredArgsConstructor
@@ -15,7 +16,9 @@ public enum Permission {
     GET_SECURED_INFO("get_secured_info"),
     READ("read"),
     DELETE_COMMENTS("delete_comments"),
-    WRITE("write");
+    WRITE("write"),
+
+    ADD_PRODUCT("add_product");
 
 
 

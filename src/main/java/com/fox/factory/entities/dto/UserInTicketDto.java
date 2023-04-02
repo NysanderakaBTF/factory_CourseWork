@@ -20,4 +20,14 @@ public class UserInTicketDto implements Serializable {
     @Email
     private final String email;
     private final String lastName;
+
+    @Override
+    public String toString() {
+        return "UserInTicketDto{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", email='" + email + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 }

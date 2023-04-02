@@ -18,6 +18,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 @Table(name = "customer")
 public class User {
     @Id
@@ -71,6 +72,11 @@ public class User {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
         User user = (User) o;
         return id != null && Objects.equals(id, user.id);
+    }
+
+    public User addOrder(Order order){
+        this.orders.add(order);
+        return this;
     }
 
 }

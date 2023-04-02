@@ -4,13 +4,13 @@ import com.fox.factory.entities.dto.OrderDto;
 import com.fox.factory.exceptions.InchangableOrderException;
 import com.fox.factory.service.MyEmailService;
 import com.fox.factory.service.OrderService;
+import com.fox.factory.service.mappers.OrderMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.event.ListDataEvent;
 import java.util.List;
 
 @Validated
@@ -19,30 +19,31 @@ import java.util.List;
 @RequestMapping("/api/orders")
 public class OrderController {
     private final OrderService service;
+    private final OrderMapper mapper;
     private MyEmailService emailService;
 
     @Operation(summary = "Create an order")
     @PostMapping("/new")
-    public ResponseEntity<OrderDto> create(@RequestBody OrderDto dto){
+    public ResponseEntity<OrderDto> create(@RequestBody OrderDto dto) {
         return ResponseEntity.ok(service.create(dto));
     }
 
     @Operation(summary = "Delete order")
     @PostMapping("/{id}/delete")
-    public ResponseEntity<Void> delete (@PathVariable Long id){
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
         service.delete(id);
         return ResponseEntity.noContent().build();
     }
 
     @Operation(summary = "View an order")
     @GetMapping("/{id}")
-    public ResponseEntity<OrderDto> getOreder(@PathVariable Long id){
+    public ResponseEntity<OrderDto> getOreder(@PathVariable Long id) {
         return ResponseEntity.ok(service.getByIdDto(id));
     }
 
     @Operation(summary = "All users orders")
-    @GetMapping("/")
-    public ResponseEntity<List<OrderDto>>  allForUser(@RequestParam Long uid){
+    @GetMapping("/{uid}/user")
+    public ResponseEntity<List<OrderDto>> allForUser(@RequestParam Long uid) {
         return ResponseEntity.ok(service.getAllByUserId(uid));
     }
 
@@ -50,7 +51,7 @@ public class OrderController {
     @PutMapping("/{id}/change")
     public ResponseEntity<OrderDto> changeOrder(@PathVariable Long id, @RequestBody OrderDto dto) throws InchangableOrderException {
         var order = service.update(id, dto);
-        emailService.sendEmail("Order :"+id+"status set to "+dto.getStatus(), dto.getUserInOrder().getEmail());
+        emailService.sendEmail("Order :" + id + "status set to " + dto.getStatus(), dto.getUserInOrder().getEmail());
         return ResponseEntity.ok(order);
     }
 

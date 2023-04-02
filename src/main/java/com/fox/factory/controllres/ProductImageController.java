@@ -33,16 +33,20 @@ public class ProductImageController {
     public ResponseEntity<Set<ProductImageDto1>> createAndAddImageToProduct(@RequestParam("image") MultipartFile[] file, @PathVariable Long pid)
          throws IOException {
         Set<ProductImageDto1> productImageSet = new HashSet<>();
+//        ProductImage img = ProductImage.builder()
+//                    .name(file[0].getOriginalFilename())
+//                    .type(file[0].getContentType())
+//                    .data(ImageUtil.compressImage(file[0].getInputStream().readAllBytes())).build();
+//        System.out.println(img.getData());
         for (MultipartFile image: file) {
             ProductImage img = ProductImage.builder()
                     .name(image.getOriginalFilename())
                     .type(image.getContentType())
-                    .data(ImageUtil.compressImage(image.getBytes())).build();
+                    .data("data:"+image.getContentType()+";base64,"+ImageUtil.compressImage(image.getInputStream().readAllBytes())).build();
             productImageSet.add(service.createFromObject(pid, img));
         }
             return ResponseEntity.status(HttpStatus.OK)
                     .body(productImageSet);
-
     }
 
     @Operation(summary = "delete image by it's id")

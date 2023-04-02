@@ -9,6 +9,7 @@ import com.fox.factory.repositories.OrderRepository;
 import com.fox.factory.service.mappers.OrderItemMapper;
 import com.fox.factory.service.mappers.OrderMapper;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,12 +22,26 @@ import java.util.stream.Collectors;
 public class OrderService {
     private final OrderRepository repository;
     private final OrderMapper mapper;
+
+    private final UserService service;
     private final OrderItemMapper itemMapper;
 
     @Transactional
     public OrderDto create(OrderDto order) {
-        return mapper.toDto(repository.save(mapper.toEntity(order)));
+        var userName = SecurityContextHolder.getContext().getAuthentication().getName();
+        var user = service.findByUsername(userName).orElseThrow();
+        Order order1 = mapper.toEntity(order);
+        order1.setUser(user);
+        order1 = repository.save(order1);
+        user.addOrder(order1);
+        service.save(user);
+        return mapper.toDto(order1);
     }
+    @Transactional
+    public OrderDto create(Order order) {
+        return mapper.toDto(repository.save(order));
+    }
+
 
     @Transactional
     public List<OrderDto> getAllByUserId(Long uid) {
@@ -40,7 +55,7 @@ public class OrderService {
 
     @Transactional
     public OrderDto getByIdDto(Long id) {
-        return mapper.toDto(repository.findById(id).orElse(null));
+        return mapper.toDto(repository.findById(id).orElseThrow());
     }
 
     @Transactional
@@ -70,6 +85,15 @@ public class OrderService {
     public OrderDto addOrderItem(Long id, OrderItem oi) {
         return repository.findById(id)
                 .map(order -> order.addOrderItem(oi))
+                .map(repository::save)
+                .map(mapper::toDto)
+                .orElse(null);
+    }
+
+    @Transactional
+    public OrderDto addOrderItem(Long id, List<OrderItem> oi) {
+        return repository.findById(id)
+                .map(order -> order.setItems(oi.stream().collect(Collectors.toSet())))
                 .map(repository::save)
                 .map(mapper::toDto)
                 .orElse(null);

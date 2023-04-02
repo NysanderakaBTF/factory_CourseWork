@@ -20,6 +20,8 @@ import java.util.Properties;
 @EntityScan("com.fox.factory.entities")
 @EnableAspectJAutoProxy
 public class AppConfig {
+
+
     @Bean
     public JavaMailSender getJavaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();

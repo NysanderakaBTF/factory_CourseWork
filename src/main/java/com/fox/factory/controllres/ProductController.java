@@ -9,8 +9,10 @@ import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.Nullable;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +28,7 @@ public class ProductController {
 
     @Operation(summary = "Create a new product")
     @PostMapping("/new")
+    @PreAuthorize("hasAuthority('add_product')")
     public ResponseEntity<ProductDetailDto> createProd(@RequestBody ProductDetailDto dto){
         return ResponseEntity.ok(service.create(dto));
     }

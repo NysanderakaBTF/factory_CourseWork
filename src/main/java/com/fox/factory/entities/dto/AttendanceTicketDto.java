@@ -22,4 +22,15 @@ public class AttendanceTicketDto implements Serializable {
     private final LocalDate creationDate;
     private final Double price;
     private final UserInTicketDto user;
+
+    @Override
+    public String toString() {
+        return "AttendanceTicketDto{" +
+                "id=" + id +
+                ", attandenceDate=" + attandenceDate +
+                ", creationDate=" + creationDate +
+                ", price=" + price +
+                ", user=" + user +
+                '}';
+    }
 }

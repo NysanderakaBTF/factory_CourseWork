@@ -17,10 +17,10 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
     @ManyToOne
     @JoinColumn
     private User user;
+
     @OneToMany
     private Set<OrderItem> itemSet;
     @Column
@@ -36,6 +36,12 @@ public class Order {
 
     public Order addOrderItem(OrderItem i){
         this.itemSet.add(i);
+        this.totalPrice += i.getTotal();
+        return this;
+    }
+
+    public Order setItems(Set<OrderItem> items){
+        this.itemSet = items;
         return this;
     }
 

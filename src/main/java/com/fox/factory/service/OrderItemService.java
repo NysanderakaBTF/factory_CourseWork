@@ -25,6 +25,13 @@ public class OrderItemService {
         item.setTotal(orderItem.getQuantity()*orderItem.getProduct().getPrice());
         return mapper.toDto(repository.save(item));
     }
+
+    @Transactional
+    public List<OrderItemInListDto> create(List<OrderItemInListDto> orderItem){
+        List<OrderItem> item = orderItem.stream().map(mapper::toEntity).toList();
+//        item.setTotal(orderItem.getQuantity()*orderItem.getProduct().getPrice());
+        return repository.saveAll(item).stream().map(mapper::toDto).toList();
+    }
     @Transactional
     public void delete(Long id){
         repository.deleteById(id);
@@ -49,6 +56,10 @@ public class OrderItemService {
 
     public OrderItem getObjectFromDto(OrderItemInListDto item){
         return mapper.toEntity(item);
+    }
+
+    public List<OrderItem> getObjectFromDto(List<OrderItemInListDto> item){
+        return item.stream().map(mapper::toEntity).toList();
     }
 
 }
