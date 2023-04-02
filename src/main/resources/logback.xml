@@ -12,7 +12,7 @@
         <file>generalapplication.log</file>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>generalapplication.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <fileNamePattern>generalapplication.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>40</maxHistory>
             <totalSizeCap>3GB</totalSizeCap>
         </rollingPolicy>
@@ -25,7 +25,7 @@
         <file>warn_application.log</file>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>warn_application.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <fileNamePattern>warn_application.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>50</maxHistory>
             <totalSizeCap>3GB</totalSizeCap>
         </rollingPolicy>
