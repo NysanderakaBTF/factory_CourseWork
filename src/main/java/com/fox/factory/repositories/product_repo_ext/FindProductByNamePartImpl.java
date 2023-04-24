@@ -9,13 +9,26 @@ import jakarta.persistence.criteria.Root;
 
 import java.util.List;
 
+/**
+ * This class is a service that implements the FindProductByNamePart interface and uses the
+ * EntityManager to query the database for products that have a name that contains the namePart
+ * parameter.
+ */
 public class FindProductByNamePartImpl implements FindProductByNamePart{
 
     EntityManager entityManager;
 
+// A constructor that takes an EntityManager as a parameter and sets the entityManager field to the
+// parameter.
     public FindProductByNamePartImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
+/**
+ * Return a list of products whose name contains the given string.
+ * 
+ * @param namePart the part of the name that you want to search for
+ * @return A list of products that match the namePart.
+ */
     @Override
     public List<Product> filterProductByName(String namePart) {
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();

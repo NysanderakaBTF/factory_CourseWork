@@ -12,6 +12,7 @@ import java.util.Date;
 
 /**
  * A DTO for the {@link AttendanceTicket} entity
+ * This class is a DTO for the AttendanceTicket entity
  */
 @AllArgsConstructor
 @Getter

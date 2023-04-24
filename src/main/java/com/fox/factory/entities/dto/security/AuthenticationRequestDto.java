@@ -10,12 +10,17 @@ import lombok.Data;
 @AllArgsConstructor
 @Builder
 
+/**
+ * A class that represents a request for authentication/request for a token.
+ */
 @Schema(description = "Запрос аутентификации/запрос для получения токена")
 public class AuthenticationRequestDto {
+// A validation annotation.
     @Schema(description = "Имя пользователя")
     @NotBlank(message = "Необходимо указать логин/имя пользователя")
     private String username;
 
+// A validation annotation.
     @Schema(description = "Пароль")
     @NotBlank(message = "Необходимо указать пароль")
     private String password;

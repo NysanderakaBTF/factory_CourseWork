@@ -4,6 +4,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+/**
+ * A class that represents a bearer token.
+ */
 
 @Data
 @AllArgsConstructor

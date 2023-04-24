@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * An OrderItem is a product that is part of an order
+ */
 @Entity
 @Getter
 @Setter

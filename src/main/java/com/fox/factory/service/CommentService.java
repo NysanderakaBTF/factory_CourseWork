@@ -52,11 +52,6 @@ public class CommentService {
                 .map(repository::save)
                 .map(mapper::toDto)
                 .orElse(null);
-//        var a = repository.findById(id).orElse(null);
-//        if (a == null)
-//            return null;
-//        a.setPublished(isPublished);
-//        return mapper.toDto(repository.save(a));
 
     }
     @Transactional
@@ -70,12 +65,6 @@ public class CommentService {
                 .map(mapper::toDto)
                 .orElse(null);
 
-//        var a = repository.findById(id).orElse(null);
-//        if (a != null){
-//            a.addToSubComments(mapper.fromSubCommentDto(sub));
-//            return mapper.toDto(repository.save(a));
-//        }
-//        return null;
     }
     @Transactional
     public CommentsDto edit(Long id, CommentsDto upd){
@@ -84,12 +73,6 @@ public class CommentService {
                 .map(repository::save)
                 .map(mapper::toDto)
                 .orElse(null);
-//
-//        var a = repository.findById(id).orElse(null);
-//        if (a!=null) {
-//            return mapper.toDto(repository.save(mapper.partialUpdate(upd, a)));
-//        }
-//        return null;
     }
     @Transactional
     public void delete(Long id){

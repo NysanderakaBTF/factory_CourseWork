@@ -8,6 +8,9 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.util.Set;
 
+/**
+ * Order is a class that represents an order made by a user
+ */
 @Entity
 @Getter
 @Setter

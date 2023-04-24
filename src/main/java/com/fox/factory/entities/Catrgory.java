@@ -7,6 +7,9 @@ import lombok.Setter;
 import java.text.Normalizer;
 import java.util.Set;
 
+/**
+ * The class Catrgory has a field title which is unique and slug which is also unique
+ */
 @Getter
 @Setter
 @Entity

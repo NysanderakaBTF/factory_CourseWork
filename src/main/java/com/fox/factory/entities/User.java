@@ -13,6 +13,9 @@ import org.springframework.lang.Nullable;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * This class is a model class that represents a user.
+ */
 @Getter
 @Setter
 @AllArgsConstructor
@@ -66,6 +69,13 @@ public class User {
     @Column
     private String lastName;
 
+/**
+ * If the object is not null and the id is not null and the id of the object is equal to the id of the
+ * object passed in, then return true
+ * 
+ * @param o the object to compare to
+ * @return The hashcode of the object.
+ */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -74,6 +84,12 @@ public class User {
         return id != null && Objects.equals(id, user.id);
     }
 
+/**
+ * This function adds an order to the user's list of orders
+ * 
+ * @param order The order to be added to the user's list of orders.
+ * @return The User object.
+ */
     public User addOrder(Order order){
         this.orders.add(order);
         return this;

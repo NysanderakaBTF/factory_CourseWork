@@ -106,11 +106,6 @@ public class OrderService {
                 .map(repository::save)
                 .map(mapper::toDto)
                 .orElse(null);
-//        var a = repository.findById(orderId).orElse(null);
-//        if (a == null)
-//            return null;
-//        a.removeOrderItem(itemId);
-//        return mapper.toDto(repository.save(a));
     }
 
 

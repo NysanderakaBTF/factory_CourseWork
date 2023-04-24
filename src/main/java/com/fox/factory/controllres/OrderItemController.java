@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * It's a controller class that handles the requests for the order items.
+ */
 @Validated
 @RestController
 @RequiredArgsConstructor
@@ -22,18 +25,39 @@ public class OrderItemController {
     private final OrderItemService service;
     private final OrderService orderService;
 
+/**
+ * Creates order item and adds it to order
+ * 
+ * @param oid order id
+ * @param item OrderItemInListDto
+ * @return ResponseEntity<OrderDto>
+ */
     @Operation(summary = "creates order item and adds it to order")
     @PostMapping("/add")
     public ResponseEntity<OrderDto> addItem(@PathVariable Long oid, @RequestBody OrderItemInListDto item){
         return ResponseEntity.ok(orderService.addOrderItem(oid, service.getObjectFromDto(service.create(item))));
     }
 
+/**
+ * It creates order items and adds them to order
+ * 
+ * @param oid order id
+ * @param item List<OrderItemInListDto>
+ * @return ResponseEntity<OrderDto>
+ */
     @Operation(summary = "creates order items and adds them to order")
     @PostMapping("/addbulk")
     public ResponseEntity<OrderDto> addItemBulk(@PathVariable Long oid, @RequestBody List<OrderItemInListDto> item){
         return ResponseEntity.ok(orderService.addOrderItem(oid, service.getObjectFromDto(service.create(item))));
     }
 
+/**
+ * Delete item in order
+ * 
+ * @param oid order id
+ * @param id the id of the item to be deleted
+ * @return The response entity is returning the orderDto.
+ */
     @Operation(summary = "Delete item in order")
     @DeleteMapping("/{id}/delete")
     public ResponseEntity<OrderDto> deleteItem(@PathVariable Long oid, @PathVariable Long id){
@@ -42,6 +66,14 @@ public class OrderItemController {
         return ResponseEntity.ok(orderService.getByIdDto(oid));
     }
 
+/**
+ * Change quantity of item
+ * 
+ * @param oid order id
+ * @param id the id of the order
+ * @param item the object that is sent in the request body
+ * @return ResponseEntity<OrderItemInListDto>
+ */
     @Operation(summary = "change quantity of item")
     @PutMapping("/{id}/update")
     public ResponseEntity<OrderItemInListDto> update(@PathVariable Long oid, @PathVariable Long id, @RequestBody OrderItemInListDto item){

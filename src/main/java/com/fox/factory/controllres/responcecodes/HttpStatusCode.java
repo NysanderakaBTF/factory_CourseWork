@@ -1,6 +1,9 @@
 package com.fox.factory.controllres.responcecodes;
 
 import lombok.experimental.UtilityClass;
+/**
+ * A utility class that contains all the HTTP status codes.
+ */
 
 @UtilityClass
 public class HttpStatusCode {

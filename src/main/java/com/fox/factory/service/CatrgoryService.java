@@ -45,11 +45,6 @@ public class CatrgoryService {
                 .map(repository::save)
                 .map(mapper::toDto)
                 .orElse(null);
-//        var catrgory = repository.findById(id).orElse(null);
-//        if (catrgory == null)
-//            return null;
-//        return mapper.toDto(repository.save(mapper.partialUpdate(updated, catrgory)));
-
     }
     @Transactional
     public void delete(Long id) {

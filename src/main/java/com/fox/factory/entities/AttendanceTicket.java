@@ -7,6 +7,9 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.util.Date;
 
+/**
+ * AttendanceTicket has a many-to-one relationship with User.
+ */
 @Entity
 @Getter
 @Setter

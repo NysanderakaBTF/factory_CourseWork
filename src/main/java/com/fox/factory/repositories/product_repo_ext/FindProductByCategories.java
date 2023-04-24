@@ -5,6 +5,7 @@ import com.fox.factory.entities.Product;
 
 import java.util.List;
 
+// An interface that is used to filter products by category.
 public interface FindProductByCategories {
     List<Product> filterProductByCategory(List<Catrgory> list);
 

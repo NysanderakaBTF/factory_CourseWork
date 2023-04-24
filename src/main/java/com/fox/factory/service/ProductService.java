@@ -91,6 +91,8 @@ public class ProductService {
 
     @Transactional
     public List<ProductListDto> findByCategoriesAndNames(List<CatrgoryDto> catrgoryDtos, String name, Pageable pageable) {
+        System.out.println(name);
+        System.out.println(catrgoryDtos);
         var categories = catrgoryDtos != null ? catrgoryDtos.stream().map(catrgoryMapper::toEntity).toList()
                 : null;
         var gotProducts = repository.findAll(
@@ -103,9 +105,10 @@ public class ProductService {
         if ( name == null || name.isBlank() ) {
             return (root, query, criteriaBuilder) -> criteriaBuilder.conjunction();
         }
+        var pattern = '%' + name.toUpperCase() + '%';
         return (root, query, criteriaBuilder) ->
                 criteriaBuilder.like(
-                        criteriaBuilder.upper(root.get("name")), "%" + name + "%"
+                        criteriaBuilder.upper(root.get("name")), pattern
                 );
     }
 

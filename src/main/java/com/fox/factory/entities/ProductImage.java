@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Set;
+/**
+ * ProductImage is a class that has a String data field, a String name field, a String type field, and
+ * a Product product field.
+ */
 
 @Entity
 @Getter

@@ -17,6 +17,10 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import static com.fox.factory.controllres.responcecodes.HttpStatusCode.*;
+/**
+ * This class contains methods for registering and authenticating users, as well as methods for
+ * getting, updating, and deleting user information
+ */
 
 @Validated
 @RestController
@@ -37,6 +41,16 @@ public class UserInfAuthController {
         return authenticationService.register(user);
     }
 
+/**
+ * Аутентифицирует пользователя в системе и возвращает токен для аутентификации
+ * 
+ * And here's the translation:
+ * 
+ * Authenticates the user in the system and returns a token for authentication
+ * 
+ * @param request 
+ * @return A token
+ */
     @Operation(summary = "Аутентификация пользователя",
             description = "Аутентифицирует пользователя в системе и возвращает токен для аутентификации",
             responses = {
@@ -49,6 +63,12 @@ public class UserInfAuthController {
         return authenticationService.authenticate(request);
     }
 
+/**
+ * Returns full info about user
+ * 
+ * @param id the user's id
+ * @return ResponseEntity&lt;UserDetailDto&gt;
+ */
     @Operation(
            summary = "User details",
             description = "Returns full info about user",
@@ -58,14 +78,18 @@ public class UserInfAuthController {
                    @ApiResponse(responseCode = FORBIDDEN, description = "No access to this user")
             }
     )
-//    @GetMapping("/{id}")
-//    public ResponseEntity<UserDetailDto> getfullInfo(@PathVariable Long id){
-//        return ResponseEntity.ok(userService.getById(id));
-//    }
+
     @GetMapping("/{id}")
     public ResponseEntity<UserDetailDto> getfullInfo(@PathVariable String  id){
         return ResponseEntity.ok(userService.getDtoByUsername(id));
     }
+/**
+ * Updates user info and return  full info about user
+ * 
+ * @param id The id of the user to update
+ * @param dto UserDetailDto
+ * @return ResponseEntity<UserDetailDto>
+ */
     @Operation(
             summary = "User details update",
             description = "Updates user info and return  full info about user",
@@ -81,6 +105,12 @@ public class UserInfAuthController {
     }
 
 
+/**
+ * Deletes a user by id
+ * 
+ * @param id The id of the user to be deleted
+ * @return A ResponseEntity with a status code of 204 (no content)
+ */
     @Operation(
             summary = "Delete User",
             description = "Deetes user"

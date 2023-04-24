@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.Set;
+/**
+ * Comment is a class that represents a comment on a product
+ */
 
 @Entity
 @Getter
