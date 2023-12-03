@@ -3,6 +3,8 @@ package com.fox.factory.entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -28,11 +30,13 @@ public class Comment {
     private Set<Comment> subComments;
 
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(referencedColumnName = "user_id")
     private User author;
 
     private LocalDate publishDate;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(referencedColumnName = "product_id")
     private Product product;
 

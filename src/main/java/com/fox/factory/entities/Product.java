@@ -40,11 +40,11 @@ public class Product {
 
     private Float rating = 0.0F;
     private Integer rates = 0;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany
     @JoinColumn
     private Set<Comment> comments;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany
     @JoinColumn
     private Set<OrderItem> orderItemSet;
 

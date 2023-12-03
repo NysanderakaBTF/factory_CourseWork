@@ -5,6 +5,7 @@ import com.fox.factory.entities.dto.CatrgoryDto;
 import com.fox.factory.entities.dto.CommentCreateDto;
 import com.fox.factory.entities.dto.ProductDetailDto;
 import com.fox.factory.entities.dto.ProductListDto;
+import com.fox.factory.repositories.CommentRepository;
 import com.fox.factory.repositories.OrderItemRepository;
 import com.fox.factory.repositories.ProductRepository;
 import com.fox.factory.security.JwtAuthenticationFilter;
@@ -32,7 +33,8 @@ import java.util.stream.Collectors;
 public class ProductService {
 
     private ProductRepository repository;
-    private OrderItemService orderItemService;
+    private OrderItemRepository orderItemRepository;
+    private CommentRepository commentRepository;
     private ProductMapper mapper;
     private CommentMapper commentMapper;
     private CatrgoryMapper catrgoryMapper;
@@ -45,14 +47,26 @@ public class ProductService {
         return mapper.toProductDetailDto(repository.save(mapper.fromProductDetail(product)));
     }
 
+
+    @Transactional
     public void delete(Long id) {
         var product = repository.findById(id).orElse(null);
         if (product==null)
             throw new ResponseStatusException(HttpStatusCode.valueOf(404));
         Set<OrderItem> orderItemSet = product.getOrderItemSet();
         for(var i: orderItemSet){
-            orderItemService.delete(i.getId());
+            i.setProduct(null);
         }
+        orderItemRepository.saveAll(orderItemSet);
+        Set<Comment> comments = product.getComments();
+        for(var i: comments){
+            i.setProduct(null);
+        }
+        commentRepository.saveAll(comments);
+        product.setProductImageSet(null);
+        product.setComments(null);
+        product.setOrderItemSet(null);
+        repository.save(product);
         repository.delete(product);
     }
 
