@@ -24,7 +24,7 @@ public class Order {
     @JoinColumn
     private User user;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private Set<OrderItem> itemSet;
     @Column
     private Double totalPrice;

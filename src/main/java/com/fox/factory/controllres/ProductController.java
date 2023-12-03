@@ -6,6 +6,7 @@ import com.fox.factory.entities.dto.ProductDetailDto;
 import com.fox.factory.entities.dto.ProductListDto;
 import com.fox.factory.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Pageable;
@@ -50,6 +51,7 @@ public class ProductController {
  */
     @Operation(summary = "Delete product")
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('add_product')")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id){
         service.delete(id);
         return ResponseEntity.noContent().build();
@@ -128,9 +130,10 @@ public class ProductController {
  */
     @Operation(summary = "Leave comment on a product")
     @PostMapping("/{id}/comments")
-    public ResponseEntity<ProductDetailDto> leaveCommentOnAProduct(@PathVariable Long id,
+    public ResponseEntity<ProductDetailDto> leaveCommentOnAProduct(HttpServletRequest req,
+                                                                   @PathVariable Long id,
                                                                    @RequestBody CommentCreateDto dto){
-        return ResponseEntity.ok(service.commentProduct(id, dto));
+        return ResponseEntity.ok(service.commentProduct(req, id, dto));
     }
 
 /**
@@ -142,6 +145,7 @@ public class ProductController {
  */
     @Operation(summary = "Update informaion on product")
     @PutMapping("/{id}/update")
+    @PreAuthorize("hasAuthority('add_product')")
     public ResponseEntity<ProductDetailDto> update (@PathVariable Long id, @RequestBody ProductDetailDto detailDto){
         return ResponseEntity.ok(service.update(id, detailDto));
     }

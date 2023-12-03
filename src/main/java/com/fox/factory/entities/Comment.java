@@ -24,7 +24,7 @@ public class Comment {
 
 
     private boolean isPublished;
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.ALL})
     private Set<Comment> subComments;
 
     @ManyToOne
@@ -32,7 +32,7 @@ public class Comment {
     private User author;
 
     private LocalDate publishDate;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(referencedColumnName = "product_id")
     private Product product;
 

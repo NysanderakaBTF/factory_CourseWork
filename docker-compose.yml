@@ -1,0 +1,53 @@
+version: '3.9'
+services:
+  server_cw:
+    build: .
+    ports:
+      - "8080:8080"
+    networks:
+      - server-network
+    restart: always
+    depends_on:
+      - db_cw
+  db_cw:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_ROOT_PASSWORD: 123
+      POSTGRES_DB: javaCW
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    networks:
+      - server-network
+  pg_admin:
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: example@example.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    depends_on:
+      - db_cw
+    networks:
+      - server-network
+  front:
+    build: ./cwjava
+    ports:
+      - "5173:5173"
+      - "80:80"
+    depends_on:
+      - server_cw
+    restart: always
+    networks:
+      - server-network
+    volumes:
+      - ./cwjava:/app
+networks:
+  server-network:
+
+volumes:
+  pgadmin-data:

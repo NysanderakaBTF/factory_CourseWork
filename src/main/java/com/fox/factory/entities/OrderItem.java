@@ -19,12 +19,12 @@ public class OrderItem {
     @Column
     private Integer quantity;
 
-    @OneToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Product product;
 
     @Column
     private Float total;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Order order;
 
 }

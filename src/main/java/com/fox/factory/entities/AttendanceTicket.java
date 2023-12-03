@@ -23,7 +23,7 @@ public class AttendanceTicket {
     private LocalDate creationDate;
     private Double price;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private User user;
 
 }

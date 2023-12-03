@@ -37,8 +37,8 @@ public class UserInfAuthController {
             }
     )
     @PostMapping("/register")
-    public Token register(@RequestBody @Valid UserDetailDto user) {
-        return authenticationService.register(user);
+    public ResponseEntity<Token> register(@RequestBody @Valid UserDetailDto user) {
+        return ResponseEntity.ok(authenticationService.register(user));
     }
 
 /**
@@ -59,8 +59,12 @@ public class UserInfAuthController {
             }
     )
     @PostMapping("/authenticate")
-    public Token authenticate(@RequestBody @Valid AuthenticationRequestDto request) {
-        return authenticationService.authenticate(request);
+    public ResponseEntity<Token> authenticate(@RequestBody @Valid AuthenticationRequestDto request) {
+        try {
+            return ResponseEntity.ok(authenticationService.authenticate(request));
+        }catch (Exception e) {
+            return ResponseEntity.status(400).body(null);
+        }
     }
 
 /**
@@ -116,7 +120,7 @@ public class UserInfAuthController {
             description = "Deetes user"
     )
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasAuthority('write')")
+    @PreAuthorize("hasAuthority('manage_users')")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id){
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();

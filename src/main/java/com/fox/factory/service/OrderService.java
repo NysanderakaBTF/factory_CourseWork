@@ -9,12 +9,15 @@ import com.fox.factory.repositories.OrderRepository;
 import com.fox.factory.service.mappers.OrderItemMapper;
 import com.fox.factory.service.mappers.OrderMapper;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -83,11 +86,16 @@ public class OrderService {
 
     @Transactional
     public OrderDto addOrderItem(Long id, OrderItem oi) {
-        return repository.findById(id)
-                .map(order -> order.addOrderItem(oi))
-                .map(repository::save)
-                .map(mapper::toDto)
-                .orElse(null);
+        Optional<Order> o = repository.findById(id);
+        if (o.isEmpty()){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No order with such id");
+        }
+        Order oo = o.get();
+        oo.addOrderItem(oi);
+        oo.setTotalPrice(oo.getTotalPrice() + oi.getTotal());
+        oo = repository.save(oo);
+
+        return mapper.toDto(oo);
     }
 
     @Transactional
@@ -101,11 +109,19 @@ public class OrderService {
 
     @Transactional
     public OrderDto removeOrderItem(Long orderId, Long itemId) {
-        return repository.findById(orderId)
-                .map(order -> order.removeOrderItem(itemId))
-                .map(repository::save)
-                .map(mapper::toDto)
-                .orElse(null);
+        Optional<Order> o = repository.findById(orderId);
+        if (o.isEmpty()){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No order with such id");
+        }
+        Order oo = o.get();
+        oo.removeOrderItem(itemId);
+        Double price = 0D;
+        for (var i : oo.getItemSet()){
+            price += i.getTotal();
+        }
+        oo.setTotalPrice(price);
+        oo = repository.save(oo);
+        return mapper.toDto(oo);
     }
 
 

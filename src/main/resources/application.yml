@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8000}
+  port: ${PORT:8080}
 spring:
   servlet:
     multipart:
@@ -8,9 +8,9 @@ spring:
   main:
     allow-circular-references: true
   datasource:
-    url: jdbc:postgresql://localhost/javaCW
+    url: jdbc:postgresql://db_cw:5432/javaCW
     driverClassName: org.postgresql.Driver
-    username: Fox
+    username: postgres
     password: 123
   jpa:
     generate-ddl: true

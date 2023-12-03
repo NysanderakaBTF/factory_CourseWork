@@ -24,5 +24,6 @@ public class CommentCreateDto implements Serializable {
     private final UserInCommentDto author;
     private final LocalDate publishDate;
     private final ProductListDto product;
+    @NotNull
     private final Integer rate;
 }

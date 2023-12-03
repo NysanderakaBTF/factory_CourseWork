@@ -3,7 +3,9 @@ package com.fox.factory.controllres;
 import com.fox.factory.entities.ProductImage;
 import com.fox.factory.entities.dto.ProductImageDto1;
 import com.fox.factory.entities.dto.ProductImageDto1;
+import com.fox.factory.repositories.ProductRepository;
 import com.fox.factory.service.ProductImageService;
+import com.fox.factory.service.ProductService;
 import com.fox.factory.utils.ImageUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.AllArgsConstructor;
@@ -13,9 +15,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -32,6 +36,7 @@ import java.util.Set;
  */
 public class ProductImageController {
     private ProductImageService service;
+    private ProductRepository productRepository;
 /**
  * It takes a product id and an array of images, creates a product image object from each image, and
  * adds it to the product
@@ -42,14 +47,21 @@ public class ProductImageController {
  */
     @Operation(summary = "Add image to a product")
     @PostMapping(value = "/{pid}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PreAuthorize("hasAuthority('add_product')")
     public ResponseEntity<Set<ProductImageDto1>> createAndAddImageToProduct(@RequestParam("image") MultipartFile[] file, @PathVariable Long pid)
          throws IOException {
         Set<ProductImageDto1> productImageSet = new HashSet<>();
-// Taking the image file and creating a ProductImage object from it.
+        var product = productRepository.findById(pid);
+        if (product.isEmpty()){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such product for id");
+        }
+        var p = product.get();
+        System.out.println(p);
         for (MultipartFile image: file) {
             ProductImage img = ProductImage.builder()
                     .name(image.getOriginalFilename())
                     .type(image.getContentType())
+                    .product(p)
                     .data("data:"+image.getContentType()+";base64,"+ImageUtil.compressImage(image.getInputStream().readAllBytes())).build();
             productImageSet.add(service.createFromObject(pid, img));
         }
@@ -65,6 +77,7 @@ public class ProductImageController {
  */
     @Operation(summary = "delete image by it's id")
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('add_product')")
     public ResponseEntity<Void> deleteImage(@PathVariable Long id){
         service.deleteImg(id);
         return ResponseEntity.noContent().build();

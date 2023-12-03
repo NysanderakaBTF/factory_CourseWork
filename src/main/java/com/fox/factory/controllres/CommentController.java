@@ -6,6 +6,7 @@ import com.fox.factory.entities.dto.SubCommentDto;
 import com.fox.factory.service.CommentService;
 import com.fox.factory.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.Nullable;
@@ -28,10 +29,17 @@ public class CommentController {
  * @param id The id of the comment to be deleted
  * @return A ResponseEntity with no content.
  */
-    @Operation(summary = "View comment")
+    @Operation(summary = "Delete commnet")
     @DeleteMapping("/{id}/delete")
-    public ResponseEntity<Void> deleteComment(@PathVariable Long id){
-        service.delete(id);
+    public ResponseEntity<Void> deleteComment( HttpServletRequest req, @PathVariable Long id){
+        service.delete(req, id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @Operation(summary = "Delete sub comment")
+    @DeleteMapping("/{id}/{sub_id}")
+    public ResponseEntity<Void> deleteSubCommnet(HttpServletRequest req, @PathVariable Long id, @PathVariable Long sub_id){
+        service.delete_sub(req, id, sub_id);
         return ResponseEntity.noContent().build();
     }
 
@@ -70,8 +78,8 @@ public class CommentController {
  */
     @Operation(summary = "ass subcomment for existing one")
     @PostMapping("/{id}/add_sub")
-    public ResponseEntity<CommentsDto> addSub(@PathVariable long id, @RequestBody SubCommentDto dto){
-        return ResponseEntity.ok(service.addSubComment(id, dto));
+    public ResponseEntity<CommentsDto> addSub(HttpServletRequest req,  @PathVariable long id, @RequestBody SubCommentDto dto){
+        return ResponseEntity.ok(service.addSubComment(req, id, dto));
     }
 
 /**

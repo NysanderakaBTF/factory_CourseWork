@@ -30,6 +30,6 @@ public class ProductImage {
     private String type;
 
     @JoinColumn
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Product product;
 }

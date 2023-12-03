@@ -6,6 +6,8 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
+import org.springframework.web.server.ResponseStatusException;
+
 @Slf4j
 @Component
 @Aspect
@@ -20,7 +22,10 @@ public class LoggingAspect {
         Object obj;
         try {
             obj = pjp.proceed();
-        }catch (Exception e){
+        }catch (ResponseStatusException e){
+            throw e;
+        }
+        catch (Exception e){
             log.error("Error occured while timing and executing method "+pjp.toLongString()+"MSG: "+e.toString());
             obj = null;
         }

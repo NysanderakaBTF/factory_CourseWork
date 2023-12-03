@@ -40,9 +40,14 @@ public class Product {
 
     private Float rating = 0.0F;
     private Integer rates = 0;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn
     private Set<Comment> comments;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn
+    private Set<OrderItem> orderItemSet;
+
 
 /**
  * This function adds a category to the list of categories

@@ -8,8 +8,10 @@ import com.fox.factory.service.mappers.ProductImageMapper;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Set;
 
@@ -54,7 +56,10 @@ public class ProductImageService {
     //todo: fix complex deletion by changing database constraints and cascade types
     @Transactional
     public void deleteImg(Long id){
-        var image = repository.findById(id).orElseThrow();
+        var image = repository.findById(id).orElse(null);
+        if (image == null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
         var product = image.getProduct();
         product.removeImage(image);
         productService.saveFormEntity(product);
